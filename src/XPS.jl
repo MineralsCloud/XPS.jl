@@ -1,21 +1,27 @@
 module XPS
 
 using AbInitioSoftwareBase: load, extension
-using EquationsOfStateOfSolids.Collections
+using EquationsOfStateOfSolids.Collections: Parameters, EquationOfState
 using Comonicon: @cast, @main
 using Pkg: @pkg_str
+using PrettyPrint: pprint
 using Serialization: deserialize
 
 @cast function print(file)
     ext = lowercase(extension(file))
-    data = if ext == "jls"
-        deserialize(file)
+    if ext == "jls"
+        data = deserialize(file)
+        if data isa Union{Parameters,EquationOfState}
+            display(data)
+        else
+            pprint(data)
+        end
     elseif ext in ("json", "yaml", "yml", "toml")
-        load(file)
+        data = load(file)
+        pprint(data)
     else
         error("unsupported file extension `$ext`!")
     end
-    display(data)
 end
 
 @cast function install(plugin)
