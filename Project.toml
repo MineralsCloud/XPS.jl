@@ -6,10 +6,13 @@ version = "0.1.0"
 [deps]
 AbInitioSoftwareBase = "df5135bc-470e-46c6-b451-292e27ca5b84"
 Comonicon = "863f3e99-da2a-4334-8734-de3dacbe5542"
+Crystallography = "3bff3928-7a76-11e9-2089-d112443085a5"
 EquationsOfStateOfSolids = "1eaa2786-f833-4167-8397-974edad0881e"
+Express = "b12df14e-adf7-11e9-0606-d5813a258349"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 PrettyPrint = "8162dcfd-2161-5ef2-ae6c-7681170c5f98"
 Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+SimpleWorkflow = "6a97d125-85da-4b66-b300-4bba10360563"
 
 [compat]
 julia = "1"
