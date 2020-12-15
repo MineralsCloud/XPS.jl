@@ -1,6 +1,7 @@
 module XPS
 
 using AbInitioSoftwareBase: load, extension
+using EquationsOfStateOfSolids.Collections
 using Comonicon: @cast, @main
 using Pkg: @pkg_str
 using Serialization: deserialize
