@@ -2,13 +2,14 @@
 
 using Comonicon: @cast
 using Express.EosFitting: Scf, VcOptim, FitEos
+using QuantumESPRESSOExpress.EosFitting
 
 @cast function fiteos(calc, cfgfile)
     calc = lowercase(calc)
     if calc == "scf"
-        return FitEos{Scf}()(cfgfile)
+        display(FitEos{Scf}()(cfgfile))
     elseif calc == "optim"
-        return FitEos{VcOptim}()(cfgfile)
+        display(FitEos{VcOptim}()(cfgfile))
     else
         error("unrecognized calculation type `$calc`!")
     end
