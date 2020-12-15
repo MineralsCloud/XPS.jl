@@ -1,11 +1,13 @@
 module XPS
 
 using AbInitioSoftwareBase: load, extension
-using EquationsOfStateOfSolids.Collections: Parameters, EquationOfState
 using Comonicon: @cast, @main
+using EquationsOfStateOfSolids.Collections: Parameters, EquationOfState
+using Express: buildworkflow
 using Pkg: @pkg_str
 using PrettyPrint: pprint
 using Serialization: deserialize
+using SimpleWorkflow: run!
 
 @cast function print(file)
     ext = lowercase(extension(file))
@@ -31,6 +33,11 @@ end
     else
         error("unsupported plugin `$name`!")
     end
+end
+
+@cast function run(config)
+    wfl = buildworkflow(config)
+    run!(wfl)
 end
 
 """
