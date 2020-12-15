@@ -40,6 +40,8 @@ end
     run!(wfl)
 end
 
+include("EosFitting.jl")
+
 """
 my demo Comonicon CLI project.
 """
