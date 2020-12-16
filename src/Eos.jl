@@ -1,10 +1,10 @@
-# module EosFitting
+module Eos
 
 using Comonicon: @cast
 using Express.EosFitting: Scf, VcOptim, FitEos
 using QuantumESPRESSOExpress.EosFitting
 
-@cast function fiteos(calc, cfgfile)
+@cast function fit(calc, cfgfile)
     calc = lowercase(calc)
     if calc == "scf"
         display(FitEos{Scf}()(cfgfile))
@@ -15,4 +15,4 @@ using QuantumESPRESSOExpress.EosFitting
     end
 end
 
-# end
+end
