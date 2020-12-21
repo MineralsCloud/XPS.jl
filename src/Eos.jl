@@ -2,7 +2,7 @@ module Eos
 
 using Comonicon: @cast
 using EquationOfStateRecipes
-using EquationsOfStateOfSolids.Collections: Parameters, EquationOfStateOfSolids, EnergyEOS
+using EquationsOfStateOfSolids.Collections: Parameters, EquationOfStateOfSolids, EnergyEos
 using Express.EosFitting: Scf, VcOptim, FitEos
 using QuantumESPRESSOExpress.EosFitting
 using Serialization: deserialize
@@ -23,7 +23,7 @@ end
 @cast function plot(file; out = replace(file, ".jls" => ".pdf"))
     data = deserialize(file)
     if data isa Parameters
-        eos = EnergyEOS(data)
+        eos = EnergyEos(data)
     elseif data isa EquationOfStateOfSolids
         eos = data
     else
