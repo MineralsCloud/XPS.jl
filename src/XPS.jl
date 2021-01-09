@@ -9,6 +9,13 @@ using PrettyPrint: pprint
 using Serialization: deserialize
 using SimpleWorkflow: run!
 
+"""
+Print the `file` in a pretty format.
+
+# Arguments
+
+- `file`: the file to be printed. Available extensions are ".jls", ".json", ".yaml", ".yml" or ".toml".
+"""
 @cast function print(file)
     ext = lowercase(extension(file))
     if ext == "jls"
@@ -35,6 +42,13 @@ end
     end
 end
 
+"""
+Run a `config` file, better with absolute path.
+
+# Arguments
+
+- `config`: the file to be run. Available extensions are ".json", ".yaml", ".yml" or ".toml".
+"""
 @cast function run(config)
     wfl = buildworkflow(config)
     run!(wfl)
