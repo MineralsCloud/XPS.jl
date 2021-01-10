@@ -14,7 +14,7 @@ Print the `file` in a pretty format.
 
 # Arguments
 
-- `file`: the file to be printed. Available extensions are ".jls", ".json", ".yaml", ".yml" or ".toml".
+- `file`: the file to be printed. Available extensions are `.jls`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function print(file)
     ext = lowercase(extension(file))
@@ -47,7 +47,7 @@ Run a `config` file, better with absolute path.
 
 # Arguments
 
-- `config`: the file to be run. Available extensions are ".json", ".yaml", ".yml" or ".toml".
+- `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function run(config)
     wfl = buildworkflow(config)
