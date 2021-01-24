@@ -39,7 +39,7 @@ Plot an equation of state from `file` to file "out".
 @cast function plot(file; out = replace(file, ".jls" => ".pdf"))
     data = deserialize(file)
     if data isa Parameters
-        eos = EnergyEos(data)
+        eos = EnergyEquation(data)
     elseif data isa EquationOfStateOfSolids
         eos = data
     else
