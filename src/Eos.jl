@@ -2,7 +2,7 @@ module Eos
 
 using Comonicon: @cast
 using EquationOfStateRecipes
-using EquationsOfStateOfSolids.Collections: Parameters, EquationOfStateOfSolids, EnergyEos
+using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquation
 using Express.EosFitting: Scf, VcOptim, FitEos
 using QuantumESPRESSOExpress.EosFitting
 using Serialization: deserialize

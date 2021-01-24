@@ -2,7 +2,7 @@ module XPS
 
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
-using EquationsOfStateOfSolids.Collections: Parameters, EquationOfState
+using EquationsOfStateOfSolids: Parameters, EquationOfState
 using Express: buildworkflow
 using Pkg: @pkg_str
 using PrettyPrint: pprint
