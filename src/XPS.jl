@@ -3,7 +3,7 @@ module XPS
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
 using EquationsOfStateOfSolids: Parameters, EquationOfState
-using Express: buildworkflow
+using Express: buildworkflow, loadconfig
 using Pkg: @pkg_str
 using PrettyPrint: pprint
 using Serialization: deserialize
@@ -48,8 +48,9 @@ Run a `config` file, better with absolute path.
 - `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function run(config)
+    saveas = loadconfig(config).recover
     wfl = buildworkflow(config)
-    run!(wfl)
+    run!(wfl, saveas)
 end
 
 include("Eos.jl")
