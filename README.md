@@ -9,6 +9,7 @@
 [![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/XPS.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/XPS.jl)
 [![Coverage](https://codecov.io/gh/MineralsCloud/XPS.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/XPS.jl)
 [![Coverage](https://coveralls.io/repos/github/MineralsCloud/XPS.jl/badge.svg?branch=master)](https://coveralls.io/github/MineralsCloud/XPS.jl?branch=master)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/organization/repository)
 
 ## Installation
 <p>
