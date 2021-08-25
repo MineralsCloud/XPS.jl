@@ -5,6 +5,7 @@ using EquationOfStateRecipes
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquation
 using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos
 using Express.EquationOfStateWorkflow.DefaultActions: buildjob
+using Express.EquationOfStateWorkflow.Recipes: buildworkflow
 using QuantumESPRESSOExpress.EquationOfStateWorkflow
 using Serialization: deserialize
 import Plots
@@ -51,6 +52,17 @@ Plot an equation of state from `file` to file "out".
     end
     Plots.plot(eos)
     Plots.savefig(out)
+end
+
+"""
+Run a `config` file, better with absolute path.
+
+# Arguments
+- `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
+"""
+@cast function run(config)
+    workflow = buildworkflow(config)
+    run!(workflow)
 end
 
 end
