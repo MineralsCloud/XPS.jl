@@ -3,8 +3,8 @@ module Eos
 using Comonicon: @cast
 using EquationOfStateRecipes
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquation
-using Express.EosFitting: Scf, VcOptim, FitEos
-using QuantumESPRESSOExpress.EosFitting
+using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos
+using QuantumESPRESSOExpress.EquationOfStateWorkflow
 using Serialization: deserialize
 
 import Plots
