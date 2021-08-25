@@ -2,12 +2,12 @@ module XPS
 
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
-using EquationsOfStateOfSolids: Parameters, EquationOfState
-using Express: buildworkflow, loadconfig
+using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
+using Express: buildworkflow
 using Pkg: @pkg_str
 using PrettyPrint: pprint
 using Serialization: deserialize
-using SimpleWorkflow: run!
+using SimpleWorkflows: run!
 
 """
 Print the `file` in a pretty format.
@@ -19,7 +19,7 @@ Print the `file` in a pretty format.
     ext = lowercase(extension(file))
     if ext == "jls"
         data = deserialize(file)
-        if data isa Union{Parameters,EquationOfState}
+        if data isa Union{Parameters,EquationOfStateOfSolids}
             display(data)
         else
             pprint(data)
