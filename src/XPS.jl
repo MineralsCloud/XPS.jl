@@ -2,12 +2,12 @@ module XPS
 
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
-using EquationsOfStateOfSolids: Parameters, EquationOfState
-using Express: buildworkflow, loadconfig
+using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
+using Express: buildworkflow
 using Pkg: @pkg_str
 using PrettyPrint: pprint
 using Serialization: deserialize
-using SimpleWorkflow: run!
+using SimpleWorkflows: run!
 
 """
 Print the `file` in a pretty format.
@@ -19,7 +19,7 @@ Print the `file` in a pretty format.
     ext = lowercase(extension(file))
     if ext == "jls"
         data = deserialize(file)
-        if data isa Union{Parameters,EquationOfState}
+        if data isa Union{Parameters,EquationOfStateOfSolids}
             display(data)
         else
             pprint(data)
@@ -35,7 +35,17 @@ end
 @cast function install(plugin)
     name = lowercase(plugin)
     if name == "qe"
-        pkg"add https://github.com/MineralsCloud/QuantumESPRESSOExpress.jl.git"
+        pkg"add QuantumESPRESSOExpress"
+    else
+        error("unsupported plugin `$name`!")
+    end
+end
+
+@cast function uninstall(plugin)
+    name = lowercase(plugin)
+    if name == "qe"
+        pkg"rm QuantumESPRESSOExpress"
+        pkg"gc"
     else
         error("unsupported plugin `$name`!")
     end
@@ -53,9 +63,8 @@ Run a `config` file, better with absolute path.
     run!(wfl, saveas)
 end
 
-include("Eos.jl")
-
-@cast Eos
+include("EquationOfStateWorkflow.jl")
+@cast EquationOfStateWorkflow
 
 """
 The main command `xps`.

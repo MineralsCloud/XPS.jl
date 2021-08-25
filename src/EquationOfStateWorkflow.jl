@@ -1,12 +1,12 @@
-module Eos
+module EquationOfStateWorkflow
 
 using Comonicon: @cast
 using EquationOfStateRecipes
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquation
-using Express.EosFitting: Scf, VcOptim, FitEos
-using QuantumESPRESSOExpress.EosFitting
+using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos
+using Express.EquationOfStateWorkflow.DefaultActions: buildjob
+using QuantumESPRESSOExpress.EquationOfStateWorkflow
 using Serialization: deserialize
-
 import Plots
 
 """
@@ -19,12 +19,16 @@ Fit an equation of state from `cfgfile` for calculation `calc`.
 @cast function fit(calc, cfgfile)
     calc = lowercase(calc)
     if calc == "scf"
-        display(FitEos{Scf}()(cfgfile))
+        T = Scf
     elseif calc == "optim"
-        display(FitEos{VcOptim}()(cfgfile))
+        T = VcOptim
     else
-        error("unrecognized calculation type `$calc`!")
+        throw(ArgumentError("unrecognized calculation type `$calc`!"))
     end
+    job = buildjob(FitEos{T}(), cfgfile)
+    run!(job)
+    wait(job)
+    display(getresult(job))
 end
 
 """
