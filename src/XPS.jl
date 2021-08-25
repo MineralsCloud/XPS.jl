@@ -49,8 +49,8 @@ end
     end
 end
 
-include("EquationOfStateWorkflow.jl")
-@cast EquationOfStateWorkflow
+include("EOS.jl")
+@cast EOS
 
 """
 The main command `xps`.
