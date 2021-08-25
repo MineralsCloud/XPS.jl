@@ -35,7 +35,11 @@ end
 @cast function install(plugin)
     name = lowercase(plugin)
     if name == "qe"
-        pkg"add https://github.com/MineralsCloud/QuantumESPRESSOExpress.jl.git"
+        pkg"add QuantumESPRESSOExpress"
+    else
+        error("unsupported plugin `$name`!")
+    end
+end
     else
         error("unsupported plugin `$name`!")
     end
