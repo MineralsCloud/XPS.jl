@@ -40,6 +40,12 @@ end
         error("unsupported plugin `$name`!")
     end
 end
+
+@cast function uninstall(plugin)
+    name = lowercase(plugin)
+    if name == "qe"
+        pkg"rm QuantumESPRESSOExpress"
+        pkg"gc"
     else
         error("unsupported plugin `$name`!")
     end
