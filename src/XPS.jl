@@ -3,11 +3,9 @@ module XPS
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
-using Express: buildworkflow
 using Pkg: @pkg_str
 using PrettyPrint: pprint
 using Serialization: deserialize
-using SimpleWorkflows: run!
 
 """
 Print the `file` in a pretty format.

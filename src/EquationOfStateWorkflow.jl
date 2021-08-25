@@ -8,6 +8,7 @@ using Express.EquationOfStateWorkflow.DefaultActions: buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
 using QuantumESPRESSOExpress.EquationOfStateWorkflow
 using Serialization: deserialize
+using SimpleWorkflows: run!
 import Plots
 
 """
