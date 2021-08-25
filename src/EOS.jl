@@ -38,21 +38,20 @@ Plot an equation of state from `file` to file "out".
 
 # Arguments
 - `file`: a `.jls` file that saves the equation of state.
-
-# Options
-- `-o, --out <path>`: the file path that saves the plot. Available extensions are `.pdf`, `.png`.
 """
-@cast function plot(file; out = replace(file, ".jls" => ".pdf"))
+@cast function plot(file)
     data = deserialize(file)
-    if data isa Parameters
-        eos = EnergyEquation(data)
-    elseif data isa EquationOfStateOfSolids
-        eos = data
-    else
-        error("unsupported type $(typeof(data))!")
+    for (key, value) in data
+        if value isa Parameters
+            eos = EnergyEquation(data)
+        elseif data isa EquationOfStateOfSolids
+            eos = value
+        else
+            error("unsupported type $(typeof(data))!")
+        end
+        Plots.plot(eos)
+        Plots.savefig("$key.pdf")
     end
-    Plots.plot(eos)
-    Plots.savefig(out)
 end
 
 """
