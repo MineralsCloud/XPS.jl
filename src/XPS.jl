@@ -53,7 +53,7 @@ Run a `config` file, better with absolute path.
     run!(wfl, saveas)
 end
 
-include("Eos.jl")
+include("EquationOfStateWorkflow.jl")
 
 @cast Eos
 

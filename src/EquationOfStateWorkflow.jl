@@ -1,4 +1,4 @@
-module Eos
+module EquationOfStateWorkflow
 
 using Comonicon: @cast
 using EquationOfStateRecipes
