@@ -64,8 +64,7 @@ Run a `config` file, better with absolute path.
 end
 
 include("EquationOfStateWorkflow.jl")
-
-@cast Eos
+@cast EquationOfStateWorkflow
 
 """
 The main command `xps`.
