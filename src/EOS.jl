@@ -64,6 +64,7 @@ Run a `config` file, better with absolute path.
 @cast function run(config)
     workflow = buildworkflow(config)
     run!(workflow)
+    return workflow
 end
 
 end
