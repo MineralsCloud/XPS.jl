@@ -52,6 +52,9 @@ end
 include("EOS.jl")
 @cast EOS
 
+include("DFPT.jl")
+@cast DFPT
+
 """
 The main command `xps`.
 """
