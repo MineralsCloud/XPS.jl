@@ -43,11 +43,11 @@ Plot an equation of state from `file` to file "out".
     data = deserialize(file)
     for (key, value) in data
         if value isa Parameters
-            eos = EnergyEquation(data)
+            eos = EnergyEquation(value)
         elseif data isa EquationOfStateOfSolids
             eos = value
         else
-            error("unsupported type $(typeof(data))!")
+            error("unsupported type $(typeof(value))!")
         end
         Plots.plot(eos)
         Plots.savefig("$key.pdf")
