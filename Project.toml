@@ -23,7 +23,7 @@ EquationOfStateRecipes = "0.1"
 EquationsOfStateOfSolids = "0.2"
 Plots = "1"
 PrettyPrint = "0.1, 0.2"
-SimpleWorkflows = "0.6"
+SimpleWorkflows = "0.6, 0.7"
 julia = "1"
 
 [extras]
