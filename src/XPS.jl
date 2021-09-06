@@ -3,7 +3,7 @@ module XPS
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
-using Pkg: @pkg_str
+using Pkg: add, rm, gc
 using PrettyPrint: pprint
 using Serialization: deserialize
 
@@ -33,7 +33,7 @@ end
 @cast function install(plugin)
     name = lowercase(plugin)
     if name == "qe"
-        pkg"add QuantumESPRESSOExpress"
+        add("QuantumESPRESSOExpress")
     else
         error("unsupported plugin `$name`!")
     end
@@ -42,8 +42,8 @@ end
 @cast function uninstall(plugin)
     name = lowercase(plugin)
     if name == "qe"
-        pkg"rm QuantumESPRESSOExpress"
-        pkg"gc"
+        rm("QuantumESPRESSOExpress")
+        gc()
     else
         error("unsupported plugin `$name`!")
     end
