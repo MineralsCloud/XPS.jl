@@ -61,7 +61,7 @@ end
 
 function load_plugin()
     name = @load_preference("plugin")
-    if name == "qe"
+    if name == "Quantum ESPRESSO"
         eval(:(using QuantumESPRESSOExpress))
     else
         error("unsupported plugin `$name`!")
