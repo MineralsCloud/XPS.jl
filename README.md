@@ -6,6 +6,7 @@
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/MineralsCloud/XPS.jl?svg=true)](https://ci.appveyor.com/project/singularitti/XPS-jl)
 [![Build Status](https://cloud.drone.io/api/badges/MineralsCloud/XPS.jl/status.svg)](https://cloud.drone.io/MineralsCloud/XPS.jl)
 [![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/XPS.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/XPS.jl)
+[![pipeline status](https://gitlab.com/singularitti/XPS.jl/badges/master/pipeline.svg)](https://gitlab.com/singularitti/XPS.jl/-/pipelines)
 [![Coverage](https://codecov.io/gh/MineralsCloud/XPS.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/XPS.jl)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/organization/repository)
 
