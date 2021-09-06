@@ -2,8 +2,8 @@ module DFPT
 
 using Comonicon: @cast
 using Express.PhononWorkflow.Recipes: buildworkflow
-using QuantumESPRESSOExpress.PhononWorkflow
 using SimpleWorkflows: run!
+using ..XPS: load_plugin
 
 """
 Run a `config` file, better with absolute path.
@@ -12,6 +12,7 @@ Run a `config` file, better with absolute path.
 - `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function run(config)
+    load_plugin()
     workflow = buildworkflow(config)
     run!(workflow)
     return workflow
