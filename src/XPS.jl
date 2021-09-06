@@ -4,7 +4,7 @@ using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
 using Pkg: add, rm, gc
-using Preferences: @set_preferences!
+using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
 using Serialization: deserialize
 
@@ -54,6 +54,15 @@ end
     name = lowercase(plugin)
     if name == "qe"
         @set_preferences!("plugin" => "Quantum ESPRESSO")
+    else
+        error("unsupported plugin `$name`!")
+    end
+end
+
+function load_plugin()
+    name = @load_preference("plugin")
+    if name == "qe"
+        eval(:(using QuantumESPRESSOExpress))
     else
         error("unsupported plugin `$name`!")
     end
