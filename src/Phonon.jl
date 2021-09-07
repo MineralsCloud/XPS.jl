@@ -1,4 +1,4 @@
-module DFPT
+module Phonon
 
 using Comonicon: @cast
 using Express.PhononWorkflow.Recipes: buildworkflow
