@@ -3,7 +3,7 @@ module XPS
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
-using Pkg: add, rm, gc
+using Pkg: add, rm, gc, @pkg_str
 using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
 using Serialization: deserialize
@@ -37,7 +37,8 @@ end
 @cast function install(plugin)
     name = lowercase(plugin)
     if name == "qe"
-        add("QuantumESPRESSOExpress")
+        pkg"add https://github.com/MineralsCloud/QuantumESPRESSOExpress.jl.git"
+        # add("QuantumESPRESSOExpress")
     else
         error("unsupported plugin `$name`!")
     end
