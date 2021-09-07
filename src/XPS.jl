@@ -88,8 +88,8 @@ end
 include("EOS.jl")
 @cast EOS
 
-include("DFPT.jl")
-@cast DFPT
+include("Phonon.jl")
+@cast Phonon
 
 """
 The main command `xps`.
