@@ -91,6 +91,9 @@ include("EOS.jl")
 include("Phonon.jl")
 @cast Phonon
 
+include("QHA.jl")
+@cast QHA
+
 """
 The main command `xps`.
 """
