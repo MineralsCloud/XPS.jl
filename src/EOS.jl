@@ -7,7 +7,7 @@ using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos
 using Express.EquationOfStateWorkflow.DefaultActions: buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
 using Serialization: deserialize
-using SimpleWorkflows: run!
+using SimpleWorkflows: run!, getresult
 import Plots
 using ..XPS: load_plugin
 
@@ -30,7 +30,7 @@ Fit an equation of state from `cfgfile` for calculation `calc`.
     job = buildjob(FitEos{T}(), cfgfile)
     run!(job)
     wait(job)
-    display(getresult(job))
+    display(something(getresult(job)))
 end
 
 """
