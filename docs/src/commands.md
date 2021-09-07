@@ -30,6 +30,6 @@ xps eos
 ```
 
 ```@docs
-XPS.Eos.fit
-XPS.Eos.plot
+XPS.EOS.fit
+XPS.EOS.plot
 ```
