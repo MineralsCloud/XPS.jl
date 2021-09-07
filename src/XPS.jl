@@ -7,6 +7,9 @@ using Pkg: add, rm, gc
 using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
 using Serialization: deserialize
+using SimpleWorkflows: Workflow
+using TikzGraphs
+using TikzPictures
 
 """
 Print the `file` in a pretty format.
@@ -65,6 +68,20 @@ function load_plugin()
         eval(:(using QuantumESPRESSOExpress))
     else
         error("unsupported plugin `$name`!")
+    end
+end
+
+@cast function graph(file)
+    ext = extension(file)
+    workflow = deserialize(file)
+    typeassert(workflow, Workflow)
+    if ext == "jls"
+        TikzGraphs.save(
+            TikzPicture.PDF(replace(file, ".jls" => ".pdf")),
+            TikzGraphs.plot(workflow.graph),
+        )
+    else
+        error("unsupported extension `$ext`!")
     end
 end
 
