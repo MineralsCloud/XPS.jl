@@ -6,7 +6,7 @@ CurrentModule = ExpressCommands
 
 Documentation for [ExpressCommands](https://github.com/MineralsCloud/ExpressCommands.jl).
 
-Documentation for [XPS](https://github.com/MineralsCloud/XPS.jl).
+Documentation for [ExpressCommands](https://github.com/MineralsCloud/ExpressCommands.jl).
 
 ## Manual Outline
 
