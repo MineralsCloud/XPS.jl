@@ -1,13 +1,12 @@
-# XPS
+# ExpressCommands
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://MineralsCloud.github.io/XPS.jl/stable)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://MineralsCloud.github.io/XPS.jl/dev)
-[![Build Status](https://github.com/MineralsCloud/XPS.jl/workflows/CI/badge.svg)](https://github.com/MineralsCloud/XPS.jl/actions)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/MineralsCloud/XPS.jl?svg=true)](https://ci.appveyor.com/project/singularitti/XPS-jl)
-[![Build Status](https://cloud.drone.io/api/badges/MineralsCloud/XPS.jl/status.svg)](https://cloud.drone.io/MineralsCloud/XPS.jl)
-[![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/XPS.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/XPS.jl)
-[![pipeline status](https://gitlab.com/singularitti/XPS.jl/badges/master/pipeline.svg)](https://gitlab.com/singularitti/XPS.jl/-/pipelines)
-[![Coverage](https://codecov.io/gh/MineralsCloud/XPS.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/XPS.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://MineralsCloud.github.io/ExpressCommands.jl/stable)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://MineralsCloud.github.io/ExpressCommands.jl/dev)
+[![Build Status](https://github.com/MineralsCloud/ExpressCommands.jl/workflows/CI/badge.svg)](https://github.com/MineralsCloud/ExpressCommands.jl/actions)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/MineralsCloud/ExpressCommands.jl?svg=true)](https://ci.appveyor.com/project/singularitti/ExpressCommands-jl)
+[![Build Status](https://cloud.drone.io/api/badges/MineralsCloud/ExpressCommands.jl/status.svg)](https://cloud.drone.io/MineralsCloud/ExpressCommands.jl)
+[![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl)
+[![Coverage](https://codecov.io/gh/MineralsCloud/ExpressCommands.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/ExpressCommands.jl)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/organization/repository)
 
 ## Installation
