@@ -27,6 +27,7 @@ Plots = "1"
 Preferences = "1"
 PrettyPrint = "0.1, 0.2"
 SimpleWorkflows = "0.6, 0.7, 0.8"
+TikzPictures = "3"
 TikzGraphs = "1"
 julia = "1"
 
