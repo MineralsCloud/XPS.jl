@@ -1,7 +1,7 @@
 # Commands
 
 ```@meta
-CurrentModule = XPS
+CurrentModule = ExpressCommands
 ```
 
 The main command is `xps`, by default it installs to [`JULIA_DEPOT_PATH/bin`](http://docs.julialang.org/en/v1/manual/environment-variables/#JULIA_DEPOT_PATH).
@@ -30,6 +30,6 @@ xps eos
 ```
 
 ```@docs
-XPS.EOS.fit
-XPS.EOS.plot
+ExpressCommands.EOS.fit
+ExpressCommands.EOS.plot
 ```

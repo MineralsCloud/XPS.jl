@@ -1,23 +1,22 @@
-# XPS
+# ExpressCommands
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://MineralsCloud.github.io/XPS.jl/stable)
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://MineralsCloud.github.io/XPS.jl/dev)
-[![Build Status](https://github.com/MineralsCloud/XPS.jl/workflows/CI/badge.svg)](https://github.com/MineralsCloud/XPS.jl/actions)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/MineralsCloud/XPS.jl?svg=true)](https://ci.appveyor.com/project/singularitti/XPS-jl)
-[![Build Status](https://cloud.drone.io/api/badges/MineralsCloud/XPS.jl/status.svg)](https://cloud.drone.io/MineralsCloud/XPS.jl)
-[![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/XPS.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/XPS.jl)
-[![pipeline status](https://gitlab.com/singularitti/XPS.jl/badges/master/pipeline.svg)](https://gitlab.com/singularitti/XPS.jl/-/pipelines)
-[![Coverage](https://codecov.io/gh/MineralsCloud/XPS.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/XPS.jl)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://MineralsCloud.github.io/ExpressCommands.jl/stable)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://MineralsCloud.github.io/ExpressCommands.jl/dev)
+[![Build Status](https://github.com/MineralsCloud/ExpressCommands.jl/workflows/CI/badge.svg)](https://github.com/MineralsCloud/ExpressCommands.jl/actions)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/MineralsCloud/ExpressCommands.jl?svg=true)](https://ci.appveyor.com/project/singularitti/ExpressCommands-jl)
+[![Build Status](https://cloud.drone.io/api/badges/MineralsCloud/ExpressCommands.jl/status.svg)](https://cloud.drone.io/MineralsCloud/ExpressCommands.jl)
+[![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl)
+[![Coverage](https://codecov.io/gh/MineralsCloud/ExpressCommands.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/ExpressCommands.jl)
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/organization/repository)
 
 ## Installation
 <p>
-XPS is a &nbsp;
+ExpressCommands is a &nbsp;
     <a href="https://julialang.org">
         <img src="https://julialang.org/favicon.ico" width="16em">
         Julia Language
     </a>
-    &nbsp; package. To install XPS,
+    &nbsp; package. To install ExpressCommands,
     please <a href="https://docs.julialang.org/en/v1/manual/getting-started/">open
     Julia's interactive session (known as REPL)</a> and press <kbd>]</kbd> key in the REPL to use the package mode, then type the following command
 </p>
@@ -25,26 +24,26 @@ XPS is a &nbsp;
 For stable release
 
 ```julia
-pkg> add XPS
+pkg> add ExpressCommands
 ```
 
 For current master
 
 ```julia
-pkg> add XPS#master
+pkg> add ExpressCommands#master
 ```
 
 ### Command Line Interface
 
 Add `~/.julia/bin` to your `PATH` to enable command line interface. Or run
-`XPS.comonicon_install_path()` to install everything automatically.
+`ExpressCommands.comonicon_install_path()` to install everything automatically.
 
 Sometimes, you won't trigger the package `build` of Julia. You can install the command line interface
-manually via `XPS.comonicon_install()`.
+manually via `ExpressCommands.comonicon_install()`.
 
 ### Completions
 
-If you are using ZSH, you can enable the auto-completion by `XPS.comonicon_install_path()`. Or add the `FPATH`
+If you are using ZSH, you can enable the auto-completion by `ExpressCommands.comonicon_install_path()`. Or add the `FPATH`
 to your `.zshrc`
 
 ```sh

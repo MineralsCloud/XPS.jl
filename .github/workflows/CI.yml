@@ -62,9 +62,9 @@ jobs:
       - run: |
           julia --project=docs -e '
             using Documenter: DocMeta, doctest
-            using XPS
-            DocMeta.setdocmeta!(XPS, :DocTestSetup, :(using XPS); recursive=true)
-            doctest(XPS)'
+            using ExpressCommands
+            DocMeta.setdocmeta!(ExpressCommands, :DocTestSetup, :(using ExpressCommands); recursive=true)
+            doctest(ExpressCommands)'
       - run: julia --project=docs docs/make.jl
         env:
           JULIA_PKG_SERVER: ""

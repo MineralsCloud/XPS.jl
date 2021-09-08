@@ -9,7 +9,7 @@ using Express.EquationOfStateWorkflow.Recipes: buildworkflow
 using Serialization: deserialize
 using SimpleWorkflows: run!, getresult
 import Plots
-using ..XPS: load_plugin
+using ..ExpressCommands: load_plugin
 
 """
 Fit an equation of state from `cfgfile` for calculation `calc`.

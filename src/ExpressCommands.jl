@@ -1,4 +1,4 @@
-module XPS
+module ExpressCommands
 
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main

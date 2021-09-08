@@ -1,10 +1,12 @@
 ```@meta
-CurrentModule = XPS
+CurrentModule = ExpressCommands
 ```
 
-# XPS
+# ExpressCommands
 
-Documentation for [XPS](https://github.com/MineralsCloud/XPS.jl).
+Documentation for [ExpressCommands](https://github.com/MineralsCloud/ExpressCommands.jl).
+
+Documentation for [ExpressCommands](https://github.com/MineralsCloud/ExpressCommands.jl).
 
 ## Manual Outline
 
@@ -21,5 +23,5 @@ Depth = 3
 ```
 
 ```@autodocs
-Modules = [XPS]
+Modules = [ExpressCommands]
 ```

@@ -1,16 +1,16 @@
-using XPS
+using ExpressCommands
 using Documenter
 
-DocMeta.setdocmeta!(XPS, :DocTestSetup, :(using XPS); recursive=true)
+DocMeta.setdocmeta!(ExpressCommands, :DocTestSetup, :(using ExpressCommands); recursive=true)
 
 makedocs(;
-    modules=[XPS],
-    authors="Qi Zhang <singularitti@outlook.com>",
-    repo="https://github.com/MineralsCloud/XPS.jl/blob/{commit}{path}#{line}",
-    sitename="XPS.jl",
+    modules=[ExpressCommands],
+    authors="Reno <singularitti@outlook.com>",
+    repo="https://github.com/MineralsCloud/ExpressCommands.jl/blob/{commit}{path}#{line}",
+    sitename="ExpressCommands.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://MineralsCloud.github.io/XPS.jl",
+        canonical="https://MineralsCloud.github.io/ExpressCommands.jl",
         assets=String[],
     ),
     pages=[
@@ -20,5 +20,5 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/MineralsCloud/XPS.jl",
+    repo="github.com/MineralsCloud/ExpressCommands.jl",
 )
