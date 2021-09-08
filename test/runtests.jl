@@ -1,6 +1,6 @@
-using XPS
+using ExpressCommands
 using Test
 
-@testset "XPS.jl" begin
+@testset "ExpressCommands.jl" begin
     # Write your tests here.
 end
