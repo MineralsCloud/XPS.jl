@@ -3,7 +3,7 @@ module Phonon
 using Comonicon: @cast
 using Express.PhononWorkflow.Recipes: buildworkflow
 using SimpleWorkflows: run!
-using ..XPS: load_plugin
+using ..ExpressCommands: load_plugin
 
 """
 Run a `config` file, better with absolute path.
