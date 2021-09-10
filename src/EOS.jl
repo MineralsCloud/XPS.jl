@@ -6,10 +6,11 @@ using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquat
 using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos
 using Express.EquationOfStateWorkflow.DefaultActions: buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
+using QuantumESPRESSOExpress
 using Serialization: deserialize
 using SimpleWorkflows: run!, getresult
 import Plots
-using ..ExpressCommands: @load_plugin
+# using ..ExpressCommands: @load_plugin
 
 """
 Fit an equation of state from `cfgfile` for calculation `calc`.
@@ -61,7 +62,7 @@ Run a `config` file, better with absolute path.
 - `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function run(config)
-    @load_plugin
+    # @load_plugin
     workflow = buildworkflow(config)
     run!(workflow)
     return workflow

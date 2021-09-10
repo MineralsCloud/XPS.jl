@@ -34,43 +34,43 @@ Print the `file` in a pretty format.
     end
 end
 
-@cast function install(plugin)
-    name = lowercase(plugin)
-    if name == "qe"
-        pkg"add https://github.com/MineralsCloud/QuantumESPRESSOExpress.jl.git"
-        # add("QuantumESPRESSOExpress")
-    else
-        error("unsupported plugin `$name`!")
-    end
-end
+# @cast function install(plugin)
+#     name = lowercase(plugin)
+#     if name == "qe"
+#         pkg"add https://github.com/MineralsCloud/QuantumESPRESSOExpress.jl.git"
+#         # add("QuantumESPRESSOExpress")
+#     else
+#         error("unsupported plugin `$name`!")
+#     end
+# end
 
-@cast function uninstall(plugin)
-    name = lowercase(plugin)
-    if name == "qe"
-        rm("QuantumESPRESSOExpress")
-        gc()
-    else
-        error("unsupported plugin `$name`!")
-    end
-end
+# @cast function uninstall(plugin)
+#     name = lowercase(plugin)
+#     if name == "qe"
+#         rm("QuantumESPRESSOExpress")
+#         gc()
+#     else
+#         error("unsupported plugin `$name`!")
+#     end
+# end
 
-@cast function use(plugin)
-    name = lowercase(plugin)
-    if name == "qe"
-        @set_preferences!("plugin" => "Quantum ESPRESSO")
-    else
-        error("unsupported plugin `$name`!")
-    end
-end
+# @cast function use(plugin)
+#     name = lowercase(plugin)
+#     if name == "qe"
+#         @set_preferences!("plugin" => "Quantum ESPRESSO")
+#     else
+#         error("unsupported plugin `$name`!")
+#     end
+# end
 
-macro load_plugin()
-    name = @load_preference("plugin")
-    if name == "Quantum ESPRESSO"
-        return :(@eval using QuantumESPRESSOExpress)
-    else
-        error("unsupported plugin `$name`!")
-    end
-end
+# macro load_plugin()
+#     name = @load_preference("plugin")
+#     if name == "Quantum ESPRESSO"
+#         return :(@eval using QuantumESPRESSOExpress)
+#     else
+#         error("unsupported plugin `$name`!")
+#     end
+# end
 
 @cast function graph(file)
     ext = extension(file)
