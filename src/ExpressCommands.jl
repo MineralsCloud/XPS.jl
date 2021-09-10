@@ -63,10 +63,10 @@ end
     end
 end
 
-function load_plugin()
+macro load_plugin()
     name = @load_preference("plugin")
     if name == "Quantum ESPRESSO"
-        eval(:(using QuantumESPRESSOExpress))
+        return :(@eval using QuantumESPRESSOExpress)
     else
         error("unsupported plugin `$name`!")
     end

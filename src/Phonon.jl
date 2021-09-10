@@ -3,7 +3,7 @@ module Phonon
 using Comonicon: @cast
 using Express.PhononWorkflow.Recipes: buildworkflow
 using SimpleWorkflows: run!
-using ..ExpressCommands: load_plugin
+using ..ExpressCommands: @load_plugin
 
 """
 Run a `config` file, better with absolute path.
@@ -12,7 +12,7 @@ Run a `config` file, better with absolute path.
 - `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function run(config)
-    load_plugin()
+    @load_plugin
     workflow = buildworkflow(config)
     run!(workflow)
     return workflow
