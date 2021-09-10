@@ -32,7 +32,7 @@ Preferences = "1"
 EquationOfStateRecipes = "0.1"
 julia = "1"
 TikzGraphs = "1"
-Express = "0.2"
+Express = "0.2, 0.3"
 TikzPictures = "3"
 
 [targets]
