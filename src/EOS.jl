@@ -6,6 +6,7 @@ using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquat
 using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos
 using Express.EquationOfStateWorkflow.DefaultActions: buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
+using QuantumESPRESSOExpress
 using Serialization: deserialize
 using SimpleWorkflows: run!, getresult
 import Plots

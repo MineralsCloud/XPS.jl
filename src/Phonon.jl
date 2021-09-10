@@ -2,6 +2,7 @@ module Phonon
 
 using Comonicon: @cast
 using Express.PhononWorkflow.Recipes: buildworkflow
+using QuantumESPRESSOExpress
 using SimpleWorkflows: run!
 using ..ExpressCommands: @load_plugin
 
