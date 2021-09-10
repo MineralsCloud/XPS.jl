@@ -95,6 +95,18 @@ include("Phonon.jl")
 include("QHA.jl")
 @cast QHA
 
+function whichmodule(recipe)
+    recipe = lowercase(recipe)
+    return if recipe == "eos"
+        EOS
+    elseif recipe in ("phonon dispersion", "vdos")
+        Phonon
+    elseif recipe in ("qha single", "multi qha")
+        QHA
+    else
+        error("workflow `$recipe` is not recognized!")
+    end
+end
 """
 The main command `xps`.
 """
