@@ -107,6 +107,13 @@ function whichmodule(recipe)
         error("workflow `$recipe` is not recognized!")
     end
 end
+
+@cast function run(cfgfile)
+    dict = load(cfgfile)
+    mod = whichmodule(dict["recipe"])
+    return mod.run(cfgfile)
+end
+
 """
 The main command `xps`.
 """
