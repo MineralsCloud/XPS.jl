@@ -16,6 +16,7 @@ Preferences = "21216c6a-2e73-6563-6e65-726566657250"
 EquationOfStateRecipes = "8d49d7c9-511f-4c38-862f-eeb1232c8dad"
 TikzGraphs = "b4f28e30-c73f-5eaf-a395-8a9db949a742"
 Express = "b12df14e-adf7-11e9-0606-d5813a258349"
+QuantumESPRESSOExpress = "524a00d3-5d12-4323-9774-d2c11dc9d82e"
 TikzPictures = "37f6aa50-8035-52d0-81c2-5a1d08754b2d"
 
 [extras]
