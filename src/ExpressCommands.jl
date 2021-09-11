@@ -8,8 +8,8 @@ using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
 using Serialization: deserialize
 using SimpleWorkflows: Workflow
-using TikzGraphs
-using TikzPictures
+import TikzGraphs
+import TikzPictures
 
 """
 Print the `file` in a pretty format.
@@ -78,7 +78,7 @@ end
     typeassert(workflow, Workflow)
     if ext == "jls"
         TikzGraphs.save(
-            TikzPicture.PDF(replace(file, ".jls" => ".pdf")),
+            TikzPictures.PDF(replace(file, ".jls" => ".pdf")),
             TikzGraphs.plot(workflow.graph),
         )
     else
