@@ -3,8 +3,7 @@ module EOS
 using Comonicon: @cast
 using EquationOfStateRecipes
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquation
-using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos
-using Express.EquationOfStateWorkflow.DefaultActions: buildjob
+using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos, buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
 using QuantumESPRESSOExpress
 using Serialization: deserialize
