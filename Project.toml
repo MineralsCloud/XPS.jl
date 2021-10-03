@@ -1,7 +1,7 @@
 name = "ExpressCommands"
 uuid = "0fa58581-61d8-4f50-b6a2-2e2dd41ab979"
 authors = ["singularitti <singularitti@outlook.com> and contributors"]
-version = "0.2.2"
+version = "0.2.3-DEV"
 
 [deps]
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
