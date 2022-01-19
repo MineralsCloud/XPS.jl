@@ -1,5 +1,6 @@
 module Phonon
 
+using AbInitioSoftwareBase: load
 using Comonicon: @cast
 using Express.PhononWorkflow.Recipes: buildworkflow
 using QuantumESPRESSOExpress
@@ -15,7 +16,8 @@ Run a `config` file, better with absolute path.
 @cast function run(config)
     # @load_plugin
     workflow = buildworkflow(config)
-    run!(workflow)
+    dict = load(config)
+    run!(workflow; saveas = dict["save"]["status"])
     return workflow
 end
 

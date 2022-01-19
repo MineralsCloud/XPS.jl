@@ -1,5 +1,6 @@
 module QHA
 
+using AbInitioSoftwareBase: load
 using Comonicon: @cast
 using Express.QuasiHarmonicApproxWorkflow.Recipes: buildworkflow
 using SimpleWorkflows: run!
@@ -12,7 +13,8 @@ Run a `config` file, better with absolute path.
 """
 @cast function run(config)
     workflow = buildworkflow(config)
-    run!(workflow)
+    dict = load(config)
+    run!(workflow; saveas = dict["save"]["status"])
     return workflow
 end
 

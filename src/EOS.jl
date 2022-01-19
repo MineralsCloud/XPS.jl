@@ -1,5 +1,6 @@
 module EOS
 
+using AbInitioSoftwareBase: load
 using Comonicon: @cast
 using EquationOfStateRecipes
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquation
@@ -63,7 +64,8 @@ Run a `config` file, better with absolute path.
 @cast function run(config)
     # @load_plugin
     workflow = buildworkflow(config)
-    run!(workflow)
+    dict = load(config)
+    run!(workflow; saveas = dict["save"]["status"])
     return workflow
 end
 
