@@ -4,17 +4,16 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://MineralsCloud.github.io/ExpressCommands.jl/dev)
 [![Build Status](https://github.com/MineralsCloud/ExpressCommands.jl/workflows/CI/badge.svg)](https://github.com/MineralsCloud/ExpressCommands.jl/actions)
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/MineralsCloud/ExpressCommands.jl?svg=true)](https://ci.appveyor.com/project/singularitti/ExpressCommands-jl)
-[![Build Status](https://cloud.drone.io/api/badges/MineralsCloud/ExpressCommands.jl/status.svg)](https://cloud.drone.io/MineralsCloud/ExpressCommands.jl)
 [![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl)
 [![pipeline status](https://gitlab.com/singularitti/ExpressCommands.jl/badges/master/pipeline.svg)](https://gitlab.com/singularitti/ExpressCommands.jl/-/pipelines)
 [![Coverage](https://codecov.io/gh/MineralsCloud/ExpressCommands.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/ExpressCommands.jl)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/organization/repository)
+[![GitHub license](https://img.shields.io/github/license/MineralsCloud/ExpressCommands.jl)](https://github.com/MineralsCloud/ExpressCommands.jl/blob/master/LICENSE)
 
 ## Installation
 <p>
 ExpressCommands is a &nbsp;
     <a href="https://julialang.org">
-        <img src="https://julialang.org/favicon.ico" width="16em">
+        <img src="https://raw.githubusercontent.com/JuliaLang/julia/41781b1/doc/src/assets/julia.ico" width="16em">
         Julia Language
     </a>
     &nbsp; package. To install ExpressCommands,
