@@ -3,6 +3,7 @@ module ExpressCommands
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
+import JLD2
 using Pkg: add, rm, gc, @pkg_str
 using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
@@ -15,17 +16,14 @@ import TikzPictures
 Print the `file` in a pretty format.
 
 # Arguments
-- `file`: the file to be printed. Available extensions are `.jls`, `.json`, `.yaml`, `.yml` or `.toml`.
+- `file`: the file to be printed. Available extensions are `.jls`, `.jld2`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function print(file)
     ext = lowercase(extension(file))
     if ext == "jls"
-        data = deserialize(file)
-        if data isa Union{Parameters,EquationOfStateOfSolids}
-            display(data)
-        else
-            pprint(data)
-        end
+        pprint(deserialize(file))
+    elseif ext == "jld2"
+        pprint(JLD2.load(file))
     elseif ext in ("json", "yaml", "yml", "toml")
         data = load(file)
         pprint(data)
