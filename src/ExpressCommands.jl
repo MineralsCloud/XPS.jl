@@ -72,19 +72,19 @@ end
 #     end
 # end
 
-@cast function graph(file)
-    ext = extension(file)
-    workflow = deserialize(file)
-    typeassert(workflow, Workflow)
-    if ext == "jls"
-        TikzGraphs.save(
-            TikzPictures.PDF(replace(file, ".jls" => ".pdf")),
-            TikzGraphs.plot(workflow.graph),
-        )
-    else
-        error("unsupported extension `$ext`!")
-    end
-end
+# @cast function graph(file)
+#     ext = extension(file)
+#     workflow = deserialize(file)
+#     typeassert(workflow, Workflow)
+#     if ext == "jls"
+#         TikzGraphs.save(
+#             TikzPictures.PDF(replace(file, ".jls" => ".pdf")),
+#             TikzGraphs.plot(workflow.graph),
+#         )
+#     else
+#         error("unsupported extension `$ext`!")
+#     end
+# end
 
 include("EOS.jl")
 @cast EOS
