@@ -1,7 +1,7 @@
 name = "ExpressCommands"
 uuid = "0fa58581-61d8-4f50-b6a2-2e2dd41ab979"
 authors = ["singularitti <singularitti@outlook.com> and contributors"]
-version = "0.4.1"
+version = "0.4.2"
 
 [deps]
 AbInitioSoftwareBase = "df5135bc-470e-46c6-b451-292e27ca5b84"
