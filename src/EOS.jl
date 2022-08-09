@@ -65,7 +65,7 @@ Run a `config` file, better with absolute path.
     # @load_plugin
     workflow = buildworkflow(config)
     dict = load(config)
-    run!(workflow; saveas = dict["save"]["status"])
+    run!(workflow; filename = dict["save"]["status"])
     return workflow
 end
 
