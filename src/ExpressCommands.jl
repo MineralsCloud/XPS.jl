@@ -7,7 +7,6 @@ import JLD2
 using Pkg: add, rm, gc, @pkg_str
 using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
-using Serialization: deserialize
 using SimpleWorkflows: Workflow
 import TikzGraphs
 import TikzPictures
@@ -19,11 +18,9 @@ Print the `file` in a pretty format.
 
 - `file`: the file to be printed. Available extensions are `.jld2`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
-@cast function print(file)
+@cast function show(file)
     ext = lowercase(extension(file))
-    if ext == "jls"
-        pprint(deserialize(file))
-    elseif ext == "jld2"
+    if ext == "jld2"
         pprint(JLD2.load(file))
     elseif ext in ("json", "yaml", "yml", "toml")
         data = load(file)
