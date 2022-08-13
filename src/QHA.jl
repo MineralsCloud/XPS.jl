@@ -7,15 +7,15 @@ using Express.QuasiHarmonicApproxWorkflow.Recipes: buildworkflow
 using SimpleWorkflows: run!
 
 """
-Run a `config` file, better with absolute path.
+Run a configuration file (with an absolute path will be better). It is equivalent to `xps run <file>`.
 
 # Args
 
-- `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
+- `file`: the file to be run. Acceptable extensions are `.json`, `.yaml`, `.yml`, or `.toml`.
 """
-@cast function run(config)
-    workflow = buildworkflow(config)
-    dict = load(config)
+@cast function run(file)
+    workflow = buildworkflow(file)
+    dict = load(file)
     run!(workflow; filename = dict["save"]["status"])
     return workflow
 end
