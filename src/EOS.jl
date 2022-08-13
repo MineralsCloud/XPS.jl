@@ -15,7 +15,8 @@ import Plots
 """
 Fit an equation of state from `cfgfile` for calculation `calc`.
 
-# Arguments
+# Args
+
 - `calc`: the calculation type. Acceptable options are "scf" for self-consistent calculation and "optim" for structure optimizations.
 - `cfgfile`: the file to be printed. Available extensions are `.jls`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
@@ -37,7 +38,8 @@ end
 """
 Plot an equation of state from `file` to file "out".
 
-# Arguments
+# Args
+
 - `file`: a `.jls` file that saves the equation of state.
 """
 @cast function plot(file)
@@ -58,7 +60,8 @@ end
 """
 Run a `config` file, better with absolute path.
 
-# Arguments
+# Args
+
 - `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function run(config)

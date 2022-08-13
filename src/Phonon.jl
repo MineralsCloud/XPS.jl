@@ -10,7 +10,8 @@ using SimpleWorkflows: run!
 """
 Run a `config` file, better with absolute path.
 
-# Arguments
+# Args
+
 - `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function run(config)
