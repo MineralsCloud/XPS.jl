@@ -64,19 +64,25 @@ end
 #     end
 # end
 
-# @cast function graph(file)
-#     ext = extension(file)
-#     workflow = deserialize(file)
-#     typeassert(workflow, Workflow)
-#     if ext == "jls"
-#         TikzGraphs.save(
-#             TikzPictures.PDF(replace(file, ".jls" => ".pdf")),
-#             TikzGraphs.plot(workflow.graph),
-#         )
-#     else
-#         error("unsupported extension `$ext`!")
-#     end
-# end
+"""
+Plot the directed acyclic graph representing the relations between jobs in a `Workflow`.
+
+# Args
+
+- `file`: the file to be plotted. Available extension is `.jld2`.
+"""
+@cast function graph(file)
+    ext = extension(file)
+    graph = JLD2.load(file)["graph"]
+    if ext == "jld2"
+        TikzGraphs.save(
+            TikzPictures.PDF(replace(file, ".jld2" => ".pdf")),
+            TikzGraphs.plot(graph),
+        )
+    else
+        error("unsupported extension `$ext`!")
+    end
+end
 
 include("EOS.jl")
 @cast EOS
