@@ -1,3 +1,4 @@
+"Subcommands of `xps` for the phonon workflow."
 module Ph
 
 using AbInitioSoftwareBase: load

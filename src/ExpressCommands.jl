@@ -2,12 +2,8 @@ module ExpressCommands
 
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
-using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids
 import JLD2
-using Pkg: add, rm, gc, @pkg_str
-using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
-using SimpleWorkflows: Workflow
 import TikzGraphs
 import TikzPictures
 
