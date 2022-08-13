@@ -21,9 +21,7 @@ Print the `file` in a pretty format.
 """
 @cast function show(file)
     ext = lowercase(extension(file))
-    if ext == "jls"
-        pprint(deserialize(file))
-    elseif ext == "jld2"
+    if ext == "jld2"
         pprint(JLD2.load(file))
     elseif ext in ("json", "yaml", "yml", "toml")
         data = load(file)
