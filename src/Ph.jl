@@ -1,4 +1,4 @@
-module Phonon
+module Ph
 
 using AbInitioSoftwareBase: load
 using Comonicon: @cast

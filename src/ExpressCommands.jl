@@ -85,8 +85,8 @@ end
 include("EOS.jl")
 @cast EOS
 
-include("Phonon.jl")
-@cast Phonon
+include("Ph.jl")
+@cast Ph
 
 include("QHA.jl")
 @cast QHA
@@ -96,7 +96,7 @@ function getmodule(recipe)
     return if recipe == "eos"
         EOS
     elseif recipe in ("phonon dispersion", "vdos")
-        Phonon
+        Ph
     elseif recipe in ("qha single", "multi qha")
         QHA
     else
