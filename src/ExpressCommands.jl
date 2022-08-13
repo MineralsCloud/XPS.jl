@@ -7,7 +7,6 @@ import JLD2
 using Pkg: add, rm, gc, @pkg_str
 using Preferences: @set_preferences!, @load_preference
 using PrettyPrint: pprint
-using Serialization: deserialize
 using SimpleWorkflows: Workflow
 import TikzGraphs
 import TikzPictures
