@@ -6,8 +6,8 @@ using EquationOfStateRecipes
 using EquationsOfStateOfSolids: Parameters, EquationOfStateOfSolids, EnergyEquation
 using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos, buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
+import JLD2
 using QuantumESPRESSOExpress
-using Serialization: deserialize
 using SimpleWorkflows: run!, getresult
 import Plots
 # using ..ExpressCommands: @load_plugin
@@ -40,10 +40,10 @@ Plot an equation of state from `file` to file "out".
 
 # Args
 
-- `file`: a `.jls` file that saves the equation of state.
+- `file`: a `.jld2` file that saves the equation of state.
 """
 @cast function plot(file)
-    data = deserialize(file)
+    data = JLD2.load(file)
     for (key, value) in data
         if value isa Parameters
             eos = EnergyEquation(value)
