@@ -91,7 +91,7 @@ include("Phonon.jl")
 include("QHA.jl")
 @cast QHA
 
-function whichmodule(recipe)
+function getmodule(recipe)
     recipe = lowercase(recipe)
     return if recipe == "eos"
         EOS
@@ -106,7 +106,7 @@ end
 
 @cast function run(cfgfile)
     dict = load(cfgfile)
-    mod = whichmodule(dict["recipe"])
+    mod = getmodule(dict["recipe"])
     return mod.run(cfgfile)
 end
 
