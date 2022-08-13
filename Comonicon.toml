@@ -3,5 +3,5 @@ name = "xps"
 [install]
 completion = false
 quiet = false
-compile="min"
+# compile="min"
 optimize = 2
