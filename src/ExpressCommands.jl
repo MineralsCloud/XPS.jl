@@ -3,7 +3,6 @@ module ExpressCommands
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
 import JLD2
-using Pkg: add, rm, gc, @pkg_str
 using PrettyPrint: pprint
 import TikzGraphs
 import TikzPictures
