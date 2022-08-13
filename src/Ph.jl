@@ -9,16 +9,16 @@ using SimpleWorkflows: run!
 # using ..ExpressCommands: @load_plugin
 
 """
-Run a `config` file, better with absolute path.
+Run a configuration file (with an absolute path will be better). It is equivalent to `xps run <file>`.
 
 # Args
 
-- `config`: the file to be run. Available extensions are `.json`, `.yaml`, `.yml` or `.toml`.
+- `file`: the file to be run. Acceptable extensions are `.json`, `.yaml`, `.yml`, or `.toml`.
 """
-@cast function run(config)
+@cast function run(file)
     # @load_plugin
-    workflow = buildworkflow(config)
-    dict = load(config)
+    workflow = buildworkflow(file)
+    dict = load(file)
     run!(workflow; filename = dict["save"]["status"])
     return workflow
 end
