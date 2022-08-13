@@ -14,14 +14,14 @@ import Plots
 # using ..ExpressCommands: @load_plugin
 
 """
-Fit an equation of state from `cfgfile` for calculation `calc`.
+Fit an equation of state from a configuration `file` for calculation `calc`.
 
 # Args
 
 - `calc`: the calculation type. Acceptable options are "scf" for self-consistent calculation and "optim" for structure optimizations.
-- `cfgfile`: the file to be printed. Available extensions are `.jls`, `.json`, `.yaml`, `.yml` or `.toml`.
+- `file`: the file which saves the raw data. Available extensions are `.jld2`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
-@cast function fit(calc, cfgfile)
+@cast function fit(calc, file)
     calc = lowercase(calc)
     if calc == "scf"
         T = Scf
@@ -30,18 +30,18 @@ Fit an equation of state from `cfgfile` for calculation `calc`.
     else
         throw(ArgumentError("unrecognized calculation type `$calc`!"))
     end
-    job = buildjob(FitEos{T}(), cfgfile)
+    job = buildjob(FitEos{T}(), file)
     run!(job)
     wait(job)
     display(something(getresult(job)))
 end
 
 """
-Plot an equation of state from `file` to file "out".
+Plot some equations of state from `file`.
 
 # Args
 
-- `file`: a `.jld2` file that saves the equation of state.
+- `file`: a `.jld2` file that saves the equations of state.
 """
 @cast function plot(file)
     data = JLD2.load(file)
