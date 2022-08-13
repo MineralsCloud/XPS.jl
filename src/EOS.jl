@@ -1,3 +1,4 @@
+"Subcommands of `xps` for the equation of state workflow."
 module EOS
 
 using AbInitioSoftwareBase: load

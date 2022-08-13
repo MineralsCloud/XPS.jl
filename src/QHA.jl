@@ -1,3 +1,4 @@
+"Subcommands of `xps` for the QHA workflow."
 module QHA
 
 using AbInitioSoftwareBase: load
