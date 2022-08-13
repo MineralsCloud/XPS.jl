@@ -19,7 +19,7 @@ Print the `file` in a pretty format.
 
 - `file`: the file to be printed. Available extensions are `.jld2`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
-@cast function print(file)
+@cast function show(file)
     ext = lowercase(extension(file))
     if ext == "jls"
         pprint(deserialize(file))
