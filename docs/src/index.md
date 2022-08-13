@@ -30,6 +30,31 @@ Or, equivalently, via the `Pkg` API:
 julia> import Pkg; Pkg.add("ExpressCommands")
 ```
 
+## Command Line Interface
+
+Add `~/.julia/bin` to your `PATH` to enable command line interface. Or run
+`ExpressCommands.comonicon_install_path()` to install everything automatically.
+
+Sometimes, you won't trigger the package `build` of Julia. You can install the command line interface
+manually via `ExpressCommands.comonicon_install()`.
+
+### Completions
+
+If you are using ZSH, you can enable the auto-completion by `ExpressCommands.comonicon_install_path()`. Or add the `FPATH`
+to your `.zshrc`
+
+```sh
+export FPATH="$HOME/.julia/completions:$FPATH"
+```
+
+if you do not have [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) installed, you need to add
+
+```sh
+autoload -Uz compinit && compinit
+```
+
+to your `.zshrc` as well.
+
 ## Documentation
 
 - [**STABLE**](https://MineralsCloud.github.io/ExpressCommands.jl/stable) &mdash; **documentation of the most recently tagged version.**
