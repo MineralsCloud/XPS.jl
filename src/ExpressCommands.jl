@@ -96,7 +96,7 @@ function getmodule(recipe)
     elseif recipe in ("qha single", "multi qha")
         QHA
     else
-        error("workflow `$recipe` is not recognized!")
+        error("recipe `$recipe` is not recognized!")
     end
 end
 
