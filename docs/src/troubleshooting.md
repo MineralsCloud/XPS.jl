@@ -2,7 +2,7 @@
 
 This page collects some possible errors you may encounter and trick how to fix them.
 
-_If you have additional tips, please submit a PR with suggestions._
+_If you have additional tips, please [submit a PR](https://github.com/MineralsCloud/ExpressCommands.jl/compare) with suggestions._
 
 ## Installation problems
 
@@ -49,3 +49,42 @@ julia --sysimage custom-image.so
 ```
 
 See [Fredrik Ekre's talk](https://youtu.be/IuwxE3m0_QQ?t=313) for details.
+
+## Plotting
+
+`ExpressCommands` uses [`Plots.jl`](https://github.com/JuliaPlots/Plots.jl) to plot the
+equations of state, etc. However, on some operating systems, `Plots.jl` may not successfully
+install, or some other strange issues may occur.
+
+### Choosing backends
+
+`Plots.jl` support different plotting backends
+(see [its documentation](https://docs.juliaplots.org/stable/install/)),
+some backends may work, and some may not. You could install all of them and select
+the default plotting backend by
+setting an environment variable in your `~/.julia/config/startup.jl` file (if the file does
+not exist, create it). To do this, add e.g. the following line of code:
+`ENV["PLOTS_DEFAULT_BACKEND"] = "PlotlyJS"`.
+
+### "Could not connect to display" error
+
+If you come across the following error:
+
+```
+qt.qpa.xcb: could not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: linuxfb, minimal, offscreen, vnc, xcb.
+
+connect: Connection refused
+GKS: can't connect to GKS socket application
+
+GKS: Open failed in routine OPEN_WS
+GKS: GKS not in proper state. GKS must be either in the state WSOP or WSAC in routine ACTIVATE_WS
+```
+
+It may be caused by `Plots.plot` cannot find a display to show the figure. This could happen
+on some remote clusters where you do not have access to displays.
+But it should not be a problem since we save plotted figures to file systems.
+Therefore, you could download the figure later.
