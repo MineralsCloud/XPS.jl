@@ -27,6 +27,28 @@ with some continuous integration services to test its validity.
 This repository is created and maintained by [@singularitti](https://github.com/singularitti).
 You are very welcome to contribute.
 
+Please [cite this package](https://doi.org/10.1016/j.cpc.2022.108515) as:
+
+Q. Zhang, C. Gu, J. Zhuang et al., `express`: extensible, high-level workflows for swifter *ab initio* materials modeling, *Computer Physics Communications*, 108515, doi: https://doi.org/10.1016/j.cpc.2022.108515.
+
+The BibTeX format is: 
+
+```bibtex
+@article{ZHANG2022108515,
+  title    = {express: extensible, high-level workflows for swifter ab initio materials modeling},
+  journal  = {Computer Physics Communications},
+  pages    = {108515},
+  year     = {2022},
+  issn     = {0010-4655},
+  doi      = {https://doi.org/10.1016/j.cpc.2022.108515},
+  url      = {https://www.sciencedirect.com/science/article/pii/S001046552200234X},
+  author   = {Qi Zhang and Chaoxuan Gu and Jingyi Zhuang and Renata M. Wentzcovitch},
+  keywords = {automation, workflow, high-level, high-throughput, data lineage}
+}
+```
+
+We also have an [arXiv prepint](https://arxiv.org/abs/2109.11724).
+
 ## Installation
 
 The package can be installed with the Julia package manager.
