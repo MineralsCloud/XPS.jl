@@ -63,23 +63,29 @@ end
 #     end
 # end
 
-"""
-Plot the directed acyclic graph representing the relations between jobs in a `Workflow`.
+function __init__()
+    @require TikzGraphs="b4f28e30-c73f-5eaf-a395-8a9db949a742" begin
+        @require TikzPictures="37f6aa50-8035-52d0-81c2-5a1d08754b2d" begin
+            """
+            Plot the directed acyclic graph representing the relations between jobs in a `Workflow`.
 
-# Args
+            # Args
 
-- `file`: the file to be plotted. Available extension is `.jld2`.
-"""
-@cast function graph(file)
-    ext = extension(file)
-    graph = JLD2.load(file)["graph"]
-    if ext == "jld2"
-        TikzGraphs.save(
-            TikzPictures.PDF(replace(file, ".jld2" => ".pdf")),
-            TikzGraphs.plot(graph),
-        )
-    else
-        error("unsupported extension `$ext`!")
+            - `file`: the file to be plotted. Available extension is `.jld2`.
+            """
+            @cast function graph(file)
+                ext = extension(file)
+                graph = JLD2.load(file)["graph"]
+                if ext == "jld2"
+                    TikzGraphs.save(
+                        TikzPictures.PDF(replace(file, ".jld2" => ".pdf")),
+                        TikzGraphs.plot(graph),
+                    )
+                else
+                    error("unsupported extension `$ext`!")
+                end
+            end
+        end
     end
 end
 
