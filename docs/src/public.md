@@ -10,7 +10,7 @@ The first-order commands are
 
 ```
 xps
-├── show
+├── print
 └── run
 └── graph
 ```
@@ -18,7 +18,7 @@ xps
 The usage are
 
 ```@docs
-show
+print
 run
 graph
 ```
