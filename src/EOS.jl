@@ -9,8 +9,8 @@ using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos, buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
 import JLD2
 using QuantumESPRESSOExpress
+using Requires: @require
 using SimpleWorkflows: run!, getresult
-import Plots
 # using ..ExpressCommands: @load_plugin
 
 """

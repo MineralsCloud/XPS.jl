@@ -2,10 +2,9 @@ module ExpressCommands
 
 using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
-import JLD2
+using JLD2: JLD2
 using PrettyPrint: pprint
-import TikzGraphs
-import TikzPictures
+using Requires: @require
 
 """
 Print the `file` in a pretty format.
