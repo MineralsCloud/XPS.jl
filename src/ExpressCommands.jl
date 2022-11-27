@@ -13,7 +13,7 @@ Print the `file` in a pretty format.
 
 - `file`: the file to be printed. Available extensions are `.jld2`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
-@cast function show(file)
+@cast function print(file)
     ext = lowercase(extension(file))
     if ext == "jld2"
         pprint(JLD2.load(file))
