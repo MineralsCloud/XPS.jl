@@ -1,8 +1,8 @@
 # ExpressCommands
 
-|                                 **Documentation**                                  |                                                                                                 **Build Status**                                                                                                 |                  **LICENSE**                  |
-| :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------: |
-| [![Stable][docs-stable-img]][docs-stable-url] [![Dev][docs-dev-img]][docs-dev-url] | [![Build Status][gha-img]][gha-url] [![Build Status][appveyor-img]][appveyor-url] [![Build Status][cirrus-img]][cirrus-url] [![pipeline status][gitlab-img]][gitlab-url] [![Coverage][codecov-img]][codecov-url] | [![GitHub license][license-img]][license-url] |
+|                                 **Documentation**                                  |                                                                                                 **Build Status**                                                                                                 |                                        **Others**                                         |
+| :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
+| [![Stable][docs-stable-img]][docs-stable-url] [![Dev][docs-dev-img]][docs-dev-url] | [![Build Status][gha-img]][gha-url] [![Build Status][appveyor-img]][appveyor-url] [![Build Status][cirrus-img]][cirrus-url] [![pipeline status][gitlab-img]][gitlab-url] [![Coverage][codecov-img]][codecov-url] | [![GitHub license][license-img]][license-url] [![Code Style: Blue][style-img]][style-url] |
 
 [docs-stable-img]: https://img.shields.io/badge/docs-stable-blue.svg
 [docs-stable-url]: https://MineralsCloud.github.io/ExpressCommands.jl/stable
@@ -14,12 +14,14 @@
 [appveyor-url]: https://ci.appveyor.com/project/singularitti/ExpressCommands-jl
 [cirrus-img]: https://api.cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl.svg
 [cirrus-url]: https://cirrus-ci.com/github/MineralsCloud/ExpressCommands.jl
-[gitlab-img]: https://gitlab.com/singularitti/ExpressCommands.jl/badges/master/pipeline.svg
+[gitlab-img]: https://gitlab.com/singularitti/ExpressCommands.jl/badges/main/pipeline.svg
 [gitlab-url]: https://gitlab.com/singularitti/ExpressCommands.jl/-/pipelines
-[codecov-img]: https://codecov.io/gh/MineralsCloud/ExpressCommands.jl/branch/master/graph/badge.svg
+[codecov-img]: https://codecov.io/gh/MineralsCloud/ExpressCommands.jl/branch/main/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/MineralsCloud/ExpressCommands.jl
 [license-img]: https://img.shields.io/github/license/MineralsCloud/ExpressCommands.jl
-[license-url]: https://github.com/MineralsCloud/ExpressCommands.jl/blob/master/LICENSE
+[license-url]: https://github.com/MineralsCloud/ExpressCommands.jl/blob/main/LICENSE
+[style-img]: https://img.shields.io/badge/code%20style-blue-4495d1.svg
+[style-url]: https://github.com/invenia/BlueStyle
 
 The code is [hosted on GitHub](https://github.com/MineralsCloud/ExpressCommands.jl),
 with some continuous integration services to test its validity.
@@ -58,7 +60,7 @@ From the Julia REPL, type `]` to enter the Pkg REPL mode and run:
 pkg> add ExpressCommands
 ```
 
-Or, equivalently, via the `Pkg` API:
+Or, equivalently, via the [`Pkg` API](https://pkgdocs.julialang.org/v1/getting-started/):
 
 ```julia
 julia> import Pkg; Pkg.add("ExpressCommands")
@@ -91,15 +93,15 @@ to your `.zshrc` as well.
 
 ## Documentation
 
-- [**STABLE**][docs-stable-url] &mdash; **documentation of the most recently tagged version.**
-- [**DEV**][docs-dev-url] &mdash; _documentation of the in-development version._
+- [**STABLE**][docs-stable-url] — **documentation of the most recently tagged version.**
+- [**DEV**][docs-dev-url] — _documentation of the in-development version._
 
-## Project Status
+## Project status
 
 The package is tested against, and being developed for, Julia `1.6` and above on Linux,
 macOS, and Windows.
 
-## Questions and Contributions
+## Questions and contributions
 
 Usage questions can be posted on [our discussion page][discussions-url].
 
@@ -109,4 +111,3 @@ a few guidelines that should be followed when opening pull requests and contribu
 
 [discussions-url]: https://github.com/MineralsCloud/ExpressCommands.jl/discussions
 [issues-url]: https://github.com/MineralsCloud/ExpressCommands.jl/issues
-[contrib-url]: https://github.com/MineralsCloud/ExpressCommands.jl/discussions
