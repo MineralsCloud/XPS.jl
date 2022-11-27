@@ -9,8 +9,8 @@ using Express.EquationOfStateWorkflow: Scf, VcOptim, FitEos, buildjob
 using Express.EquationOfStateWorkflow.Recipes: buildworkflow
 import JLD2
 using QuantumESPRESSOExpress
+using Requires: @require
 using SimpleWorkflows: run!, getresult
-import Plots
 # using ..ExpressCommands: @load_plugin
 
 """
@@ -36,25 +36,29 @@ Fit an equation of state from a configuration `file` for calculation `calc`.
     display(something(getresult(job)))
 end
 
-"""
-Plot some equations of state from `file`.
+function __init__()
+    @require Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80" begin
+        """
+        Plot some equations of state from `file`.
 
-# Args
+        # Args
 
-- `file`: a `.jld2` file that saves the equations of state.
-"""
-@cast function plot(file)
-    data = JLD2.load(file)
-    for (key, value) in data
-        if value isa Parameters
-            eos = EnergyEquation(value)
-        elseif data isa EquationOfStateOfSolids
-            eos = value
-        else
-            error("unsupported type $(typeof(value))!")
+        - `file`: a `.jld2` file that saves the equations of state.
+        """
+        @cast function plot(file)
+            data = JLD2.load(file)
+            for (key, value) in data
+                if value isa Parameters
+                    eos = EnergyEquation(value)
+                elseif data isa EquationOfStateOfSolids
+                    eos = value
+                else
+                    error("unsupported type $(typeof(value))!")
+                end
+                Plots.plot(eos)
+                Plots.savefig("$key.pdf")
+            end
         end
-        Plots.plot(eos)
-        Plots.savefig("$key.pdf")
     end
 end
 
