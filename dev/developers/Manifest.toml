@@ -248,7 +248,7 @@ version = "0.9.0"
 
 [[deps.ExpressCommands]]
 deps = ["AbInitioSoftwareBase", "Comonicon", "EquationOfStateRecipes", "EquationsOfStateOfSolids", "Express", "JLD2", "PrettyPrint", "QuantumESPRESSOExpress", "Requires", "SimpleWorkflows"]
-git-tree-sha1 = "d54cd50281264ed4d255cb9977e6113ff1ee5493"
+git-tree-sha1 = "eb40bc516b985a9c32377ce6f998247f435959e4"
 repo-rev = "main"
 repo-url = "https://github.com/MineralsCloud/ExpressCommands.jl"
 uuid = "0fa58581-61d8-4f50-b6a2-2e2dd41ab979"

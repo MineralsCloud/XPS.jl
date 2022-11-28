@@ -11,126 +11,126 @@
   keywords = {automation, workflow, high-level, high-throughput, data lineage}
 }</code></pre><p>We also have an <a href="https://arxiv.org/abs/2109.11724">arXiv prepint</a>.</p><h2 id="Installation"><a class="docs-heading-anchor" href="#Installation">Installation</a><a id="Installation-1"></a><a class="docs-heading-anchor-permalink" href="#Installation" title="Permalink"></a></h2><p>The package can be installed with the Julia package manager. From the Julia REPL, type <code>]</code> to enter the Pkg REPL mode and run:</p><pre><code class="language-julia hljs">pkg&gt; add ExpressCommands</code></pre><p>Or, equivalently, via the <code>Pkg</code> API:</p><pre><code class="language-julia-repl hljs" style="display:block;">julia&gt; import Pkg; Pkg.add(&quot;ExpressCommands&quot;)</code><code class="nohighlight hljs ansi" style="display:block;">   Resolving package versions...
    Installed JpegTurbo_jll ──────────────── v2.1.2+0
-   Installed libfdk_aac_jll ─────────────── v2.0.2+0
    Installed x265_jll ───────────────────── v3.5.0+0
-   Installed LERC_jll ───────────────────── v3.0.0+1
    Installed Libmount_jll ───────────────── v2.35.0+0
-   Installed LoggingExtras ──────────────── v1.0.0
+   Installed libfdk_aac_jll ─────────────── v2.0.2+0
+   Installed GR_jll ─────────────────────── v0.71.1+0
+   Installed LERC_jll ───────────────────── v3.0.0+1
    Installed MutableArithmetics ─────────── v1.1.0
    Installed Opus_jll ───────────────────── v1.3.2+0
+   Installed LoggingExtras ──────────────── v1.0.0
    Installed Xorg_xkbcomp_jll ───────────── v1.4.2+4
    Installed ExpressCommands ────────────── v0.1.0
    Installed Grisu ──────────────────────── v1.0.2
-   Installed Measures ───────────────────── v0.3.2
-   Installed Contour ────────────────────── v0.6.2
-   Installed Xorg_xcb_util_wm_jll ───────── v0.4.1+1
    Installed InlineStrings ──────────────── v1.3.2
+   Installed Measures ───────────────────── v0.3.2
+   Installed Xorg_xcb_util_wm_jll ───────── v0.4.1+1
    Installed Xorg_xcb_util_image_jll ────── v0.4.0+1
+   Installed Contour ────────────────────── v0.6.2
    Installed PlotUtils ──────────────────── v1.3.1
-   Installed Xorg_libpthread_stubs_jll ──── v0.1.0+3
    Installed OpenSSL ────────────────────── v1.3.2
+   Installed ColorSchemes ───────────────── v3.19.0
+   Installed Xorg_libpthread_stubs_jll ──── v0.1.0+3
    Installed Cairo_jll ──────────────────── v1.16.1+1
    Installed HTTP ───────────────────────── v1.5.5
-   Installed Xorg_xcb_util_jll ──────────── v0.4.0+1
    Installed RecipesPipeline ────────────── v0.6.11
-   Installed DataFrames ─────────────────── v1.4.3
-   Installed Fontconfig_jll ─────────────── v2.13.93+0
+   Installed Xorg_xcb_util_jll ──────────── v0.4.0+1
    Installed Libgpg_error_jll ───────────── v1.42.0+0
+   Installed Fontconfig_jll ─────────────── v2.13.93+0
    Installed Xorg_libxkbfile_jll ────────── v1.1.0+4
    Installed Xorg_libXinerama_jll ───────── v1.1.4+4
    Installed Xorg_libXau_jll ────────────── v1.0.9+4
    Installed Polynomials ────────────────── v2.0.25
-   Installed Configurations ─────────────── v0.16.6
-   Installed Showoff ────────────────────── v1.0.3
    Installed TikzGraphs ─────────────────── v1.1.0
+   Installed Configurations ─────────────── v0.16.6
+   Installed DataFrames ─────────────────── v1.4.3
    Installed FFMPEG ─────────────────────── v0.4.1
-   Installed ArnoldiMethod ──────────────── v0.1.0
-   Installed Qt5Base_jll ────────────────── v5.15.3+2
+   Installed Showoff ────────────────────── v1.0.3
    Installed Xorg_xcb_util_keysyms_jll ──── v0.4.0+1
-   Installed Bzip2_jll ──────────────────── v1.0.8+0
    Installed xkbcommon_jll ──────────────── v1.4.1+0
+   Installed Qt5Base_jll ────────────────── v5.15.3+2
+   Installed ArnoldiMethod ──────────────── v0.1.0
+   Installed Bzip2_jll ──────────────────── v1.0.8+0
    Installed SimpleBufferStream ─────────── v1.1.0
-   Installed Pipe ───────────────────────── v1.3.0
    Installed HarfBuzz_jll ───────────────── v2.8.1+1
-   Installed PlotThemes ─────────────────── v3.1.0
-   Installed ColorSchemes ───────────────── v3.19.0
+   Installed Pipe ───────────────────────── v1.3.0
    Installed LZO_jll ────────────────────── v2.10.1+0
+   Installed PlotThemes ─────────────────── v3.1.0
+   Installed GR ─────────────────────────── v0.71.1
    Installed fzf_jll ────────────────────── v0.29.0+0
-   Installed FriBidi_jll ────────────────── v1.0.10+0
    Installed AbInitioSoftwareBase ───────── v0.4.0
    Installed PackageCompiler ────────────── v1.6.0
    Installed Comonicon ──────────────────── v0.9.1
-   Installed UnicodeFun ─────────────────── v0.4.1
+   Installed FriBidi_jll ────────────────── v1.0.10+0
    Installed GLFW_jll ───────────────────── v3.3.8+0
-   Installed x264_jll ───────────────────── v2021.5.5+0
+   Installed UnicodeFun ─────────────────── v0.4.1
    Installed MbedTLS ────────────────────── v1.1.7
+   Installed x264_jll ───────────────────── v2021.5.5+0
+   Installed Colors ─────────────────────── v0.12.8
    Installed FreeType2_jll ──────────────── v2.10.4+0
    Installed SimpleWorkflows ────────────── v0.8.1
+   Installed Xorg_libxcb_jll ────────────── v1.13.0+3
+   Installed CodecZlib ──────────────────── v0.7.0
+   Installed libaom_jll ─────────────────── v3.4.0+0
    Installed JLFzf ──────────────────────── v0.1.5
-   Installed Colors ─────────────────────── v0.12.8
+   Installed MPICH_jll ──────────────────── v3.4.3+1
+   Installed libpng_jll ─────────────────── v1.6.38+0
    Installed ExprTools ──────────────────── v0.1.8
    Installed Express ────────────────────── v0.2.3
-   Installed CodecZlib ──────────────────── v0.7.0
-   Installed GR ─────────────────────────── v0.71.1
-   Installed Xorg_libxcb_jll ────────────── v1.13.0+3
-   Installed libpng_jll ─────────────────── v1.6.38+0
-   Installed libaom_jll ─────────────────── v3.4.0+0
-   Installed MPICH_jll ──────────────────── v3.4.3+1
-   Installed ColorTypes ─────────────────── v0.11.4
-   Installed Xorg_libXext_jll ───────────── v1.3.4+4
    Installed Zstd_jll ───────────────────── v1.5.2+0
-   Installed TensorCore ─────────────────── v0.1.1
-   Installed MatchCore ──────────────────── v0.1.1
+   Installed Xorg_libXext_jll ───────────── v1.3.4+4
    Installed Plots ──────────────────────── v1.36.5
+   Installed MatchCore ──────────────────── v0.1.1
+   Installed ColorTypes ─────────────────── v0.11.4
    Installed Expat_jll ──────────────────── v2.4.8+0
+   Installed TensorCore ─────────────────── v0.1.1
    Installed Poppler_jll ────────────────── v21.9.0+0
    Installed Libtiff_jll ────────────────── v4.4.0+0
-   Installed ExproniconLite ─────────────── v0.6.13
-   Installed Intervals ──────────────────── v1.8.0
-   Installed PrettyTables ───────────────── v2.2.1
-   Installed TimeZones ──────────────────── v1.9.0
-   Installed Ogg_jll ────────────────────── v1.3.5+1
-   Installed XSLT_jll ───────────────────── v1.1.34+0
    Installed Libffi_jll ─────────────────── v3.2.2+1
-   Installed Xorg_libXrender_jll ────────── v0.9.10+4
    Installed ColorVectorSpace ───────────── v0.9.9
+   Installed Intervals ──────────────────── v1.8.0
+   Installed ExproniconLite ─────────────── v0.6.13
+   Installed TimeZones ──────────────────── v1.9.0
+   Installed PrettyTables ───────────────── v2.2.1
+   Installed Xorg_libXrender_jll ────────── v0.9.10+4
+   Installed Ogg_jll ────────────────────── v1.3.5+1
    Installed Xorg_libXi_jll ─────────────── v1.7.10+4
-   Installed EquationsOfStateOfSolids ───── v0.2.2
    Installed LittleCMS_jll ──────────────── v2.12.0+0
-   Installed Wayland_protocols_jll ──────── v1.25.0+0
+   Installed XSLT_jll ───────────────────── v1.1.34+0
    Installed Libuuid_jll ────────────────── v2.36.0+0
    Installed Xorg_libXcursor_jll ────────── v1.2.0+4
-   Installed TikzPictures ───────────────── v3.2.0
+   Installed Wayland_protocols_jll ──────── v1.25.0+0
    Installed Xorg_xcb_util_renderutil_jll ─ v0.3.9+1
-   Installed Graphite2_jll ──────────────── v1.3.14+0
-   Installed libass_jll ─────────────────── v0.15.1+0
-   Installed Pixman_jll ─────────────────── v0.40.1+0
-   Installed Wayland_jll ────────────────── v1.19.0+0
-   Installed Gettext_jll ────────────────── v0.21.0+0
-   Installed Latexify ───────────────────── v0.15.17
+   Installed EquationsOfStateOfSolids ───── v0.2.2
    Installed LightGraphs ────────────────── v1.3.5
+   Installed Graphite2_jll ──────────────── v1.3.14+0
+   Installed Pixman_jll ─────────────────── v0.40.1+0
+   Installed libass_jll ─────────────────── v0.15.1+0
+   Installed TikzPictures ───────────────── v3.2.0
+   Installed Gettext_jll ────────────────── v0.21.0+0
+   Installed Wayland_jll ────────────────── v1.19.0+0
+   Installed Mocking ────────────────────── v0.7.5
+   Installed Latexify ───────────────────── v0.15.17
    Installed Xorg_xtrans_jll ────────────── v1.4.0+3
+   Installed OpenSSL_jll ────────────────── v1.1.19+0
    Installed OpenJpeg_jll ───────────────── v2.4.0+0
    Installed Libgcrypt_jll ──────────────── v1.8.7+0
-   Installed FFMPEG_jll ─────────────────── v4.4.2+2
-   Installed Mocking ────────────────────── v0.7.5
-   Installed OpenSSL_jll ────────────────── v1.1.19+0
    Installed BitFlags ───────────────────── v0.1.7
-   Installed Xorg_libXfixes_jll ─────────── v5.0.3+4
+   Installed FFMPEG_jll ─────────────────── v4.4.2+2
    Installed Xorg_xkeyboard_config_jll ──── v2.27.0+4
-   Installed IniFile ────────────────────── v0.5.1
    Installed FixedPointNumbers ──────────── v0.8.4
-   Installed LaTeXStrings ───────────────── v1.3.0
-   Installed LAME_jll ───────────────────── v3.100.1+0
    Installed Xorg_libXrandr_jll ─────────── v1.5.2+4
+   Installed LAME_jll ───────────────────── v3.100.1+0
    Installed Libglvnd_jll ───────────────── v1.6.0+0
+   Installed Xorg_libXfixes_jll ─────────── v5.0.3+4
+   Installed LaTeXStrings ───────────────── v1.3.0
+   Installed libvorbis_jll ──────────────── v1.3.7+1
+   Installed IniFile ────────────────────── v0.5.1
+   Installed Glib_jll ───────────────────── v2.74.0+1
    Installed Xorg_libX11_jll ────────────── v1.6.9+4
    Installed Xorg_libXdmcp_jll ──────────── v1.1.3+4
-   Installed Glib_jll ───────────────────── v2.74.0+1
-   Installed libvorbis_jll ──────────────── v1.3.7+1
    Installed Unzip ──────────────────────── v0.2.0
    Installed StringManipulation ─────────── v0.3.0
-   Installed GR_jll ─────────────────────── v0.71.1+0
     Updating `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Project.toml`
 ⌃ [0fa58581] + ExpressCommands v0.1.0
     Updating `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Manifest.toml`
@@ -347,20 +347,20 @@
     Building TimeZones ──────→ `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/d634a3641062c040fc8a7e2a3ea17661cc159688/build.log`
     Building ExpressCommands → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/0f2cf8d948a47b63d5b232ee81970f7a7fa9f3a6/build.log`
 Precompiling project...
-<span class="sgr32">  ✓ </span><span class="sgr90">Contour</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">IniFile</span>
-<span class="sgr32">  ✓ </span><span class="sgr90">SimpleBufferStream</span>
+<span class="sgr32">  ✓ </span><span class="sgr90">Contour</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">Grisu</span>
+<span class="sgr32">  ✓ </span><span class="sgr90">SimpleBufferStream</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">CodecZlib</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">BitFlags</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">LoggingExtras</span>
-<span class="sgr32">  ✓ </span><span class="sgr90">MbedTLS</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">Showoff</span>
-<span class="sgr32">  ✓ </span><span class="sgr90">Latexify</span>
+<span class="sgr32">  ✓ </span><span class="sgr90">MbedTLS</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">OpenSSL</span>
+<span class="sgr32">  ✓ </span><span class="sgr90">Latexify</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">HTTP</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">GR</span>
 <span class="sgr32">  ✓ </span><span class="sgr90">Plots</span>
 <span class="sgr33">  ✓ </span>ExpressCommands
-  15 dependencies successfully precompiled in 97 seconds. 203 already precompiled.
-  <span class="sgr33">1</span> dependency precompiled but a different version is currently loaded. Restart julia to access the new version</code></pre><h2 id="Command-Line-Interface"><a class="docs-heading-anchor" href="#Command-Line-Interface">Command Line Interface</a><a id="Command-Line-Interface-1"></a><a class="docs-heading-anchor-permalink" href="#Command-Line-Interface" title="Permalink"></a></h2><p>Add <code>~/.julia/bin</code> to your <code>PATH</code> to enable command line interface. Or run <code>ExpressCommands.comonicon_install_path()</code> to install everything automatically.</p><p>Sometimes, you won&#39;t trigger the package <code>build</code> of Julia. You can install the command line interface manually via <code>ExpressCommands.comonicon_install()</code>.</p><h3 id="Completions"><a class="docs-heading-anchor" href="#Completions">Completions</a><a id="Completions-1"></a><a class="docs-heading-anchor-permalink" href="#Completions" title="Permalink"></a></h3><p>If you are using ZSH, you can enable the auto-completion by <code>ExpressCommands.comonicon_install_path()</code>. Or add the <code>FPATH</code> to your <code>.zshrc</code></p><pre><code class="language-sh hljs">export FPATH=&quot;$HOME/.julia/completions:$FPATH&quot;</code></pre><p>if you do not have <a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a> installed, you need to add</p><pre><code class="language-sh hljs">autoload -Uz compinit &amp;&amp; compinit</code></pre><p>to your <code>.zshrc</code> as well.</p><h2 id="Documentation"><a class="docs-heading-anchor" href="#Documentation">Documentation</a><a id="Documentation-1"></a><a class="docs-heading-anchor-permalink" href="#Documentation" title="Permalink"></a></h2><ul><li><a href="https://MineralsCloud.github.io/ExpressCommands.jl/stable"><strong>STABLE</strong></a> — <strong>documentation of the most recently tagged version.</strong></li><li><a href="https://MineralsCloud.github.io/ExpressCommands.jl/dev"><strong>DEV</strong></a> — <em>documentation of the in-development version.</em></li></ul><h2 id="Project-status"><a class="docs-heading-anchor" href="#Project-status">Project status</a><a id="Project-status-1"></a><a class="docs-heading-anchor-permalink" href="#Project-status" title="Permalink"></a></h2><p>The package is tested against, and being developed for, Julia <code>1.6</code> and above on Linux, macOS, and Windows.</p><h2 id="Questions-and-contributions"><a class="docs-heading-anchor" href="#Questions-and-contributions">Questions and contributions</a><a id="Questions-and-contributions-1"></a><a class="docs-heading-anchor-permalink" href="#Questions-and-contributions" title="Permalink"></a></h2><p>Usage questions can be posted on <a href="https://github.com/MineralsCloud/ExpressCommands.jl/discussions">our discussion page</a>.</p><p>Contributions are very welcome, as are feature requests and suggestions. Please open an <a href="https://github.com/MineralsCloud/ExpressCommands.jl/issues">issue</a> if you encounter any problems. The <a href="developers/contributing/#contributing">contributing</a> page has a few guidelines that should be followed when opening pull requests and contributing code.</p><h2 id="Manual-outline"><a class="docs-heading-anchor" href="#Manual-outline">Manual outline</a><a id="Manual-outline-1"></a><a class="docs-heading-anchor-permalink" href="#Manual-outline" title="Permalink"></a></h2><ul><li><a href="installation/#installation">Installation guide</a></li><li class="no-marker"><ul><li><a href="installation/#Install-Julia">Install Julia</a></li><li class="no-marker"><ul><li><a href="installation/#Which-version-should-I-pick?">Which version should I pick?</a></li></ul></li><li><a href="installation/#Install-ExpressCommands">Install <code>ExpressCommands</code></a></li><li><a href="installation/#Update-ExpressCommands">Update <code>ExpressCommands</code></a></li><li><a href="installation/#Uninstall-and-reinstall-ExpressCommands">Uninstall and reinstall <code>ExpressCommands</code></a></li></ul></li><li><a href="developers/contributing/#contributing">Contributing</a></li><li class="no-marker"><ul><li><a href="developers/contributing/#Code-of-conduct">Code of conduct</a></li><li><a href="developers/contributing/#Join-the-community-forum">Join the community forum</a></li><li><a href="developers/contributing/#Improve-the-documentation">Improve the documentation</a></li><li><a href="developers/contributing/#File-a-bug-report">File a bug report</a></li><li><a href="developers/contributing/#Contribute-code-to-ExpressCommands">Contribute code to <code>ExpressCommands</code></a></li><li class="no-marker"><ul><li><a href="developers/contributing/#Step-1:-decide-what-to-work-on">Step 1: decide what to work on</a></li><li><a href="developers/contributing/#Step-2:-fork-ExpressCommands">Step 2: fork <code>ExpressCommands</code></a></li><li><a href="developers/contributing/#Step-3:-install-ExpressCommands-locally">Step 3: install <code>ExpressCommands</code> locally</a></li><li><a href="developers/contributing/#Step-4:-checkout-a-new-branch">Step 4: checkout a new branch</a></li><li><a href="developers/contributing/#Step-5:-make-changes">Step 5: make changes</a></li><li><a href="developers/contributing/#Step-6a:-test-your-code-changes">Step 6a: test your code changes</a></li><li><a href="developers/contributing/#Step-6b:-test-your-documentation-changes">Step 6b: test your documentation changes</a></li><li><a href="developers/contributing/#Step-7:-make-a-pull-request">Step 7: make a pull request</a></li><li><a href="developers/contributing/#Step-8:-respond-to-comments">Step 8: respond to comments</a></li><li><a href="developers/contributing/#Step-9:-cleaning-up">Step 9: cleaning up</a></li></ul></li></ul></li><li><a href="developers/style/#style">Style guide and design principles</a></li><li class="no-marker"><ul><li><a href="developers/style/#Style-guide">Style guide</a></li><li class="no-marker"><ul><li><a href="developers/style/#formatter">Run <code>JuliaFormatter</code></a></li><li><a href="developers/style/#Use-the-Julia-extension-for-Visual-Studio-Code">Use the Julia extension for Visual Studio Code</a></li></ul></li><li><a href="developers/style/#Design-principles">Design principles</a></li><li class="no-marker"><ul><li><a href="developers/style/#Consistency-vs-Adherence">Consistency vs Adherence</a></li><li><a href="developers/style/#Community-Contribution-Guidelines">Community Contribution Guidelines</a></li><li><a href="developers/style/#Open-source-contributions-are-allowed-to-start-small-and-grow-over-time">Open source contributions are allowed to start small and grow over time</a></li><li><a href="developers/style/#Generic-code-is-preferred-unless-code-is-known-to-be-specific">Generic code is preferred unless code is known to be specific</a></li><li><a href="developers/style/#Internal-types-should-match-the-types-used-by-users-when-possible">Internal types should match the types used by users when possible</a></li><li><a href="developers/style/#Trait-definition-and-adherence-to-generic-interface-is-preferred-when-possible">Trait definition and adherence to generic interface is preferred when possible</a></li><li><a href="developers/style/#Macros-should-be-limited-and-only-be-used-for-syntactic-sugar">Macros should be limited and only be used for syntactic sugar</a></li><li><a href="developers/style/#Errors-should-be-caught-as-high-as-possible,-and-error-messages-should-be-contextualized-for-newcomers">Errors should be caught as high as possible, and error messages should be contextualized for newcomers</a></li><li><a href="developers/style/#Subpackaging-and-interface-packages-is-preferred-over-conditional-modules-via-Requires.jl">Subpackaging and interface packages is preferred over conditional modules via <code>Requires.jl</code></a></li><li><a href="developers/style/#Functions-should-either-attempt-to-be-non-allocating-and-reuse-caches,-or-treat-inputs-as-immutable">Functions should either attempt to be non-allocating and reuse caches, or treat inputs as immutable</a></li><li><a href="developers/style/#Out-Of-Place-and-Immutability-is-preferred-when-sufficient-performant">Out-Of-Place and Immutability is preferred when sufficient performant</a></li><li><a href="developers/style/#Tests-should-attempt-to-cover-a-wide-gamut-of-input-types">Tests should attempt to cover a wide gamut of input types</a></li><li><a href="developers/style/#When-in-doubt,-a-submodule-should-become-a-subpackage-or-separate-package">When in doubt, a submodule should become a subpackage or separate package</a></li><li><a href="developers/style/#Globals-should-be-avoided-whenever-possible">Globals should be avoided whenever possible</a></li><li><a href="developers/style/#Type-stable-and-Type-grounded-code-is-preferred-wherever-possible">Type-stable and Type-grounded code is preferred wherever possible</a></li><li><a href="developers/style/#Closures-should-be-avoided-whenever-possible">Closures should be avoided whenever possible</a></li><li><a href="developers/style/#Numerical-functionality-should-use-the-appropriate-generic-numerical-interfaces">Numerical functionality should use the appropriate generic numerical interfaces</a></li><li><a href="developers/style/#Functions-should-capture-one-underlying-principle">Functions should capture one underlying principle</a></li><li><a href="developers/style/#Internal-choices-should-be-exposed-as-options-whenever-possible">Internal choices should be exposed as options whenever possible</a></li><li><a href="developers/style/#Prefer-code-reuse-over-rewrites-whenever-possible">Prefer code reuse over rewrites whenever possible</a></li><li><a href="developers/style/#Prefer-to-not-shadow-functions">Prefer to not shadow functions</a></li></ul></li></ul></li><li><a href="troubleshooting/#Troubleshooting">Troubleshooting</a></li><li class="no-marker"><ul><li><a href="troubleshooting/#Installation-problems">Installation problems</a></li><li class="no-marker"><ul><li><a href="troubleshooting/#I-cannot-find-the-julia-executable">I cannot find the <code>julia</code> executable</a></li></ul></li><li><a href="troubleshooting/#Loading-ExpressCommands">Loading <code>ExpressCommands</code></a></li><li class="no-marker"><ul><li><a href="troubleshooting/#Why-is-Julia-compiling/loading-modules-so-slow?-What-can-I-do?">Why is Julia compiling/loading modules so slow? What can I do?</a></li></ul></li><li><a href="troubleshooting/#Plotting">Plotting</a></li><li class="no-marker"><ul><li><a href="troubleshooting/#Choosing-backends">Choosing backends</a></li><li><a href="troubleshooting/#&quot;Could-not-connect-to-display&quot;-error">&quot;Could not connect to display&quot; error</a></li></ul></li></ul></li></ul><h2 id="Library-outline"><a class="docs-heading-anchor" href="#Library-outline">Library outline</a><a id="Library-outline-1"></a><a class="docs-heading-anchor-permalink" href="#Library-outline" title="Permalink"></a></h2><ul><li><a href="public/#Commands">Commands</a></li><li class="no-marker"><ul><li><a href="public/#The-equation-of-state-workflow-commands">The equation of state workflow commands</a></li><li><a href="public/#The-phonon-workflow-commands">The phonon workflow commands</a></li><li><a href="public/#The-QHA-workflow-commands">The QHA workflow commands</a></li></ul></li></ul><h3 id="main-index"><a class="docs-heading-anchor" href="#main-index">Index</a><a id="main-index-1"></a><a class="docs-heading-anchor-permalink" href="#main-index" title="Permalink"></a></h3><ul><li><a href="public/#ExpressCommands.EOS.fit"><code>ExpressCommands.EOS.fit</code></a></li><li><a href="public/#ExpressCommands.EOS.run"><code>ExpressCommands.EOS.run</code></a></li><li><a href="public/#ExpressCommands.Ph.run"><code>ExpressCommands.Ph.run</code></a></li><li><a href="public/#ExpressCommands.QHA.run"><code>ExpressCommands.QHA.run</code></a></li><li><a href="public/#ExpressCommands.print"><code>ExpressCommands.print</code></a></li><li><a href="public/#ExpressCommands.run"><code>ExpressCommands.run</code></a></li></ul></article><nav class="docs-footer"><a class="docs-footer-nextpage" href="installation/">Installation guide »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.23 on <span class="colophon-date" title="Sunday 27 November 2022 23:02">Sunday 27 November 2022</span>. Using Julia version 1.8.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+  15 dependencies successfully precompiled in 113 seconds. 203 already precompiled.
+  <span class="sgr33">1</span> dependency precompiled but a different version is currently loaded. Restart julia to access the new version</code></pre><h2 id="Command-Line-Interface"><a class="docs-heading-anchor" href="#Command-Line-Interface">Command Line Interface</a><a id="Command-Line-Interface-1"></a><a class="docs-heading-anchor-permalink" href="#Command-Line-Interface" title="Permalink"></a></h2><p>Add <code>~/.julia/bin</code> to your <code>PATH</code> to enable command line interface. Or run <code>ExpressCommands.comonicon_install_path()</code> to install everything automatically.</p><p>Sometimes, you won&#39;t trigger the package <code>build</code> of Julia. You can install the command line interface manually via <code>ExpressCommands.comonicon_install()</code>.</p><h3 id="Completions"><a class="docs-heading-anchor" href="#Completions">Completions</a><a id="Completions-1"></a><a class="docs-heading-anchor-permalink" href="#Completions" title="Permalink"></a></h3><p>If you are using ZSH, you can enable the auto-completion by <code>ExpressCommands.comonicon_install_path()</code>. Or add the <code>FPATH</code> to your <code>.zshrc</code></p><pre><code class="language-sh hljs">export FPATH=&quot;$HOME/.julia/completions:$FPATH&quot;</code></pre><p>if you do not have <a href="https://github.com/ohmyzsh/ohmyzsh">oh-my-zsh</a> installed, you need to add</p><pre><code class="language-sh hljs">autoload -Uz compinit &amp;&amp; compinit</code></pre><p>to your <code>.zshrc</code> as well.</p><h2 id="Documentation"><a class="docs-heading-anchor" href="#Documentation">Documentation</a><a id="Documentation-1"></a><a class="docs-heading-anchor-permalink" href="#Documentation" title="Permalink"></a></h2><ul><li><a href="https://MineralsCloud.github.io/ExpressCommands.jl/stable"><strong>STABLE</strong></a> — <strong>documentation of the most recently tagged version.</strong></li><li><a href="https://MineralsCloud.github.io/ExpressCommands.jl/dev"><strong>DEV</strong></a> — <em>documentation of the in-development version.</em></li></ul><h2 id="Project-status"><a class="docs-heading-anchor" href="#Project-status">Project status</a><a id="Project-status-1"></a><a class="docs-heading-anchor-permalink" href="#Project-status" title="Permalink"></a></h2><p>The package is tested against, and being developed for, Julia <code>1.6</code> and above on Linux, macOS, and Windows.</p><h2 id="Questions-and-contributions"><a class="docs-heading-anchor" href="#Questions-and-contributions">Questions and contributions</a><a id="Questions-and-contributions-1"></a><a class="docs-heading-anchor-permalink" href="#Questions-and-contributions" title="Permalink"></a></h2><p>Usage questions can be posted on <a href="https://github.com/MineralsCloud/ExpressCommands.jl/discussions">our discussion page</a>.</p><p>Contributions are very welcome, as are feature requests and suggestions. Please open an <a href="https://github.com/MineralsCloud/ExpressCommands.jl/issues">issue</a> if you encounter any problems. The <a href="developers/contributing/#contributing">contributing</a> page has a few guidelines that should be followed when opening pull requests and contributing code.</p><h2 id="Manual-outline"><a class="docs-heading-anchor" href="#Manual-outline">Manual outline</a><a id="Manual-outline-1"></a><a class="docs-heading-anchor-permalink" href="#Manual-outline" title="Permalink"></a></h2><ul><li><a href="installation/#installation">Installation guide</a></li><li class="no-marker"><ul><li><a href="installation/#Install-Julia">Install Julia</a></li><li class="no-marker"><ul><li><a href="installation/#Which-version-should-I-pick?">Which version should I pick?</a></li></ul></li><li><a href="installation/#Install-ExpressCommands">Install <code>ExpressCommands</code></a></li><li><a href="installation/#Update-ExpressCommands">Update <code>ExpressCommands</code></a></li><li><a href="installation/#Uninstall-and-reinstall-ExpressCommands">Uninstall and reinstall <code>ExpressCommands</code></a></li></ul></li><li><a href="developers/contributing/#contributing">Contributing</a></li><li class="no-marker"><ul><li><a href="developers/contributing/#Code-of-conduct">Code of conduct</a></li><li><a href="developers/contributing/#Join-the-community-forum">Join the community forum</a></li><li><a href="developers/contributing/#Improve-the-documentation">Improve the documentation</a></li><li><a href="developers/contributing/#File-a-bug-report">File a bug report</a></li><li><a href="developers/contributing/#Contribute-code-to-ExpressCommands">Contribute code to <code>ExpressCommands</code></a></li><li class="no-marker"><ul><li><a href="developers/contributing/#Step-1:-decide-what-to-work-on">Step 1: decide what to work on</a></li><li><a href="developers/contributing/#Step-2:-fork-ExpressCommands">Step 2: fork <code>ExpressCommands</code></a></li><li><a href="developers/contributing/#Step-3:-install-ExpressCommands-locally">Step 3: install <code>ExpressCommands</code> locally</a></li><li><a href="developers/contributing/#Step-4:-checkout-a-new-branch">Step 4: checkout a new branch</a></li><li><a href="developers/contributing/#Step-5:-make-changes">Step 5: make changes</a></li><li><a href="developers/contributing/#Step-6a:-test-your-code-changes">Step 6a: test your code changes</a></li><li><a href="developers/contributing/#Step-6b:-test-your-documentation-changes">Step 6b: test your documentation changes</a></li><li><a href="developers/contributing/#Step-7:-make-a-pull-request">Step 7: make a pull request</a></li><li><a href="developers/contributing/#Step-8:-respond-to-comments">Step 8: respond to comments</a></li><li><a href="developers/contributing/#Step-9:-cleaning-up">Step 9: cleaning up</a></li></ul></li></ul></li><li><a href="developers/style/#style">Style guide and design principles</a></li><li class="no-marker"><ul><li><a href="developers/style/#Style-guide">Style guide</a></li><li class="no-marker"><ul><li><a href="developers/style/#formatter">Run <code>JuliaFormatter</code></a></li><li><a href="developers/style/#Use-the-Julia-extension-for-Visual-Studio-Code">Use the Julia extension for Visual Studio Code</a></li></ul></li><li><a href="developers/style/#Design-principles">Design principles</a></li><li class="no-marker"><ul><li><a href="developers/style/#Consistency-vs-Adherence">Consistency vs Adherence</a></li><li><a href="developers/style/#Community-Contribution-Guidelines">Community Contribution Guidelines</a></li><li><a href="developers/style/#Open-source-contributions-are-allowed-to-start-small-and-grow-over-time">Open source contributions are allowed to start small and grow over time</a></li><li><a href="developers/style/#Generic-code-is-preferred-unless-code-is-known-to-be-specific">Generic code is preferred unless code is known to be specific</a></li><li><a href="developers/style/#Internal-types-should-match-the-types-used-by-users-when-possible">Internal types should match the types used by users when possible</a></li><li><a href="developers/style/#Trait-definition-and-adherence-to-generic-interface-is-preferred-when-possible">Trait definition and adherence to generic interface is preferred when possible</a></li><li><a href="developers/style/#Macros-should-be-limited-and-only-be-used-for-syntactic-sugar">Macros should be limited and only be used for syntactic sugar</a></li><li><a href="developers/style/#Errors-should-be-caught-as-high-as-possible,-and-error-messages-should-be-contextualized-for-newcomers">Errors should be caught as high as possible, and error messages should be contextualized for newcomers</a></li><li><a href="developers/style/#Subpackaging-and-interface-packages-is-preferred-over-conditional-modules-via-Requires.jl">Subpackaging and interface packages is preferred over conditional modules via <code>Requires.jl</code></a></li><li><a href="developers/style/#Functions-should-either-attempt-to-be-non-allocating-and-reuse-caches,-or-treat-inputs-as-immutable">Functions should either attempt to be non-allocating and reuse caches, or treat inputs as immutable</a></li><li><a href="developers/style/#Out-Of-Place-and-Immutability-is-preferred-when-sufficient-performant">Out-Of-Place and Immutability is preferred when sufficient performant</a></li><li><a href="developers/style/#Tests-should-attempt-to-cover-a-wide-gamut-of-input-types">Tests should attempt to cover a wide gamut of input types</a></li><li><a href="developers/style/#When-in-doubt,-a-submodule-should-become-a-subpackage-or-separate-package">When in doubt, a submodule should become a subpackage or separate package</a></li><li><a href="developers/style/#Globals-should-be-avoided-whenever-possible">Globals should be avoided whenever possible</a></li><li><a href="developers/style/#Type-stable-and-Type-grounded-code-is-preferred-wherever-possible">Type-stable and Type-grounded code is preferred wherever possible</a></li><li><a href="developers/style/#Closures-should-be-avoided-whenever-possible">Closures should be avoided whenever possible</a></li><li><a href="developers/style/#Numerical-functionality-should-use-the-appropriate-generic-numerical-interfaces">Numerical functionality should use the appropriate generic numerical interfaces</a></li><li><a href="developers/style/#Functions-should-capture-one-underlying-principle">Functions should capture one underlying principle</a></li><li><a href="developers/style/#Internal-choices-should-be-exposed-as-options-whenever-possible">Internal choices should be exposed as options whenever possible</a></li><li><a href="developers/style/#Prefer-code-reuse-over-rewrites-whenever-possible">Prefer code reuse over rewrites whenever possible</a></li><li><a href="developers/style/#Prefer-to-not-shadow-functions">Prefer to not shadow functions</a></li></ul></li></ul></li><li><a href="troubleshooting/#Troubleshooting">Troubleshooting</a></li><li class="no-marker"><ul><li><a href="troubleshooting/#Installation-problems">Installation problems</a></li><li class="no-marker"><ul><li><a href="troubleshooting/#I-cannot-find-the-julia-executable">I cannot find the <code>julia</code> executable</a></li></ul></li><li><a href="troubleshooting/#Loading-ExpressCommands">Loading <code>ExpressCommands</code></a></li><li class="no-marker"><ul><li><a href="troubleshooting/#Why-is-Julia-compiling/loading-modules-so-slow?-What-can-I-do?">Why is Julia compiling/loading modules so slow? What can I do?</a></li></ul></li><li><a href="troubleshooting/#Plotting">Plotting</a></li><li class="no-marker"><ul><li><a href="troubleshooting/#Choosing-backends">Choosing backends</a></li><li><a href="troubleshooting/#&quot;Could-not-connect-to-display&quot;-error">&quot;Could not connect to display&quot; error</a></li></ul></li></ul></li></ul><h2 id="Library-outline"><a class="docs-heading-anchor" href="#Library-outline">Library outline</a><a id="Library-outline-1"></a><a class="docs-heading-anchor-permalink" href="#Library-outline" title="Permalink"></a></h2><ul><li><a href="public/#Commands">Commands</a></li><li class="no-marker"><ul><li><a href="public/#The-equation-of-state-workflow-commands">The equation of state workflow commands</a></li><li><a href="public/#The-phonon-workflow-commands">The phonon workflow commands</a></li><li><a href="public/#The-QHA-workflow-commands">The QHA workflow commands</a></li></ul></li></ul><h3 id="main-index"><a class="docs-heading-anchor" href="#main-index">Index</a><a id="main-index-1"></a><a class="docs-heading-anchor-permalink" href="#main-index" title="Permalink"></a></h3><ul><li><a href="public/#ExpressCommands.EOS.fit"><code>ExpressCommands.EOS.fit</code></a></li><li><a href="public/#ExpressCommands.EOS.run"><code>ExpressCommands.EOS.run</code></a></li><li><a href="public/#ExpressCommands.Ph.run"><code>ExpressCommands.Ph.run</code></a></li><li><a href="public/#ExpressCommands.QHA.run"><code>ExpressCommands.QHA.run</code></a></li><li><a href="public/#ExpressCommands.print"><code>ExpressCommands.print</code></a></li><li><a href="public/#ExpressCommands.run"><code>ExpressCommands.run</code></a></li></ul></article><nav class="docs-footer"><a class="docs-footer-nextpage" href="installation/">Installation guide »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.23 on <span class="colophon-date" title="Monday 28 November 2022 00:52">Monday 28 November 2022</span>. Using Julia version 1.8.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
