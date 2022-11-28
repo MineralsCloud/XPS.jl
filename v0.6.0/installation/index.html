@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Installation guide · ExpressCommands.jl</title><script data-outdated-warner src="../assets/warner.js"></script><link rel="canonical" href="https://MineralsCloud.github.io/ExpressCommands.jl/installation/"/><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.045/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.24/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="../">ExpressCommands.jl</a></span></div><form class="docs-search" action="../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../">Home</a></li><li><span class="tocitem">Manual</span><ul><li class="is-active"><a class="tocitem" href>Installation guide</a><ul class="internal"><li><a class="tocitem" href="#Install-Julia"><span>Install Julia</span></a></li><li><a class="tocitem" href="#Install-ExpressCommands"><span>Install <code>ExpressCommands</code></span></a></li><li><a class="tocitem" href="#Update-ExpressCommands"><span>Update <code>ExpressCommands</code></span></a></li><li><a class="tocitem" href="#Uninstall-and-reinstall-ExpressCommands"><span>Uninstall and reinstall <code>ExpressCommands</code></span></a></li></ul></li></ul></li><li><a class="tocitem" href="../public/">API Reference</a></li><li><span class="tocitem">Developer Docs</span><ul><li><a class="tocitem" href="../developers/contributing/">Contributing</a></li><li><a class="tocitem" href="../developers/style/">Style Guide</a></li></ul></li><li><a class="tocitem" href="../troubleshooting/">Troubleshooting</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Manual</a></li><li class="is-active"><a href>Installation guide</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Installation guide</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/MineralsCloud/ExpressCommands.jl/blob/main/docs/src/installation.md#" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="installation"><a class="docs-heading-anchor" href="#installation">Installation guide</a><a id="installation-1"></a><a class="docs-heading-anchor-permalink" href="#installation" title="Permalink"></a></h1><p>Here are the installation instructions for package <a href="https://github.com/MineralsCloud/ExpressCommands.jl"><code>ExpressCommands</code></a>. If you have trouble installing it, please refer to our <a href="../troubleshooting/#Troubleshooting">Troubleshooting</a> page for more information.</p><h2 id="Install-Julia"><a class="docs-heading-anchor" href="#Install-Julia">Install Julia</a><a id="Install-Julia-1"></a><a class="docs-heading-anchor-permalink" href="#Install-Julia" title="Permalink"></a></h2><p>First, you should install <a href="https://julialang.org/">Julia</a>. We recommend downloading it from <a href="https://julialang.org/downloads/">its official website</a>. Please follow the detailed instructions on its website if you have to <a href="https://docs.julialang.org/en/v1/devdocs/build/build/">build Julia from source</a>. Some computing centers provide preinstalled Julia. Please contact your administrator for more information in that case. Here&#39;s some additional information on <a href="https://github.com/hlrs-tasc/julia-on-hpc-systems">how to set up Julia on HPC systems</a>.</p><p>If you have <a href="https://brew.sh">Homebrew</a> installed, <a href="https://support.apple.com/guide/terminal/open-or-quit-terminal-apd5265185d-f365-44cb-8b09-71a064a42125/mac">open <code>Terminal.app</code></a> and type</p><pre><code class="language-shell hljs">brew install julia</code></pre><p>to install it as a <a href="https://docs.brew.sh/Formula-Cookbook">formula</a>.</p><p>If you are also using macOS and want to install it as a prebuilt binary app, type</p><pre><code class="language-shell hljs">brew install --cask julia</code></pre><p>instead.</p><p>If you want to install multiple Julia versions in the same operating system, a recommended way is to use a version manager such as <a href="https://github.com/JuliaLang/juliaup"><code>juliaup</code></a>. First, <a href="https://github.com/JuliaLang/juliaup#installation">install <code>juliaup</code></a>. Then, run</p><pre><code class="language-shell hljs">juliaup add release
+juliaup default release</code></pre><p>to configure the <code>julia</code> command to start the latest stable version of Julia (this is also the default value).</p><p>There is a <a href="https://youtu.be/14zfdbzq5BM">short video introduction to <code>juliaup</code></a> made by its authors.</p><h3 id="Which-version-should-I-pick?"><a class="docs-heading-anchor" href="#Which-version-should-I-pick?">Which version should I pick?</a><a id="Which-version-should-I-pick?-1"></a><a class="docs-heading-anchor-permalink" href="#Which-version-should-I-pick?" title="Permalink"></a></h3><p>You can install the &quot;Current stable release&quot; or the &quot;Long-term support (LTS) release&quot;.</p><ul><li>The &quot;Current stable release&quot; is the latest release of Julia. It has access to newer features, and is likely faster.</li><li>The &quot;Long-term support release&quot; is an older version of Julia that has continued to receive bug and security fixes. However, it may not have the latest features or performance improvements.</li></ul><p>For most users, you should install the &quot;Current stable release&quot;, and whenever Julia releases a new version of the current stable release, you should update your version of Julia. Note that any code you write on one version of the current stable release will continue to work on all subsequent releases.</p><p>For users in restricted software environments (e.g., your enterprise IT controls what software you can install), you may be better off installing the long-term support release because you will not have to update Julia as frequently.</p><p>Versions higher than <code>v1.3</code>, especially <code>v1.6</code>, are strongly recommended. This package may not work on <code>v1.0</code> and below. Since the Julia team has set <code>v1.6</code> as the LTS release, we will gradually drop support for versions below <code>v1.6</code>.</p><p>Julia and Julia packages support multiple operating systems and CPU architectures; check <a href="https://julialang.org/downloads/#supported_platforms">this table</a> to see if it can be installed on your machine. For Mac computers with M-series processors, this package and its dependencies may not work. Please install the Intel-compatible version of Julia (for macOS x86-64) if any platform-related error occurs.</p><h2 id="Install-ExpressCommands"><a class="docs-heading-anchor" href="#Install-ExpressCommands">Install <code>ExpressCommands</code></a><a id="Install-ExpressCommands-1"></a><a class="docs-heading-anchor-permalink" href="#Install-ExpressCommands" title="Permalink"></a></h2><p>Now I am using <a href="https://en.wikipedia.org/wiki/MacOS">macOS</a> as a standard platform to explain the following steps:</p><ol><li><p>Open <code>Terminal.app</code>, and type <code>julia</code> to start an interactive session (known as the <a href="https://docs.julialang.org/en/v1/stdlib/REPL/">REPL</a>).</p></li><li><p>Run the following commands and wait for them to finish:</p><pre><code class="language-julia-repl hljs">julia&gt; using Pkg
+
+julia&gt; Pkg.update()
+
+julia&gt; Pkg.add(&quot;ExpressCommands&quot;)</code></pre></li><li><p>Run</p><pre><code class="language-julia-repl hljs">julia&gt; using ExpressCommands</code></pre><p>and have fun!</p></li><li><p>While using, please keep this Julia session alive. Restarting might cost some time.</p></li></ol><p>If you want to install the latest in-development (probably buggy) version of <code>ExpressCommands</code>, type</p><pre><code class="language-julia-repl hljs" style="display:block;">julia&gt; using Pkg</code><code class="nohighlight hljs ansi" style="display:block;"></code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; Pkg.update()</code><code class="nohighlight hljs ansi" style="display:block;">    Updating registry at `~/.julia/registries/General`
+    Updating git-repo `https://github.com/JuliaRegistries/General.git`
+   Installed ExpressCommands ─ v0.6.0
+    Updating `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Project.toml`
+  [0fa58581] ↑ ExpressCommands v0.1.0 ⇒ v0.6.0
+    Updating `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Manifest.toml`
+⌅ [df5135bc] ↑ AbInitioSoftwareBase v0.4.0 ⇒ v0.6.5
+  [6b84a0a3] + AcuteML v0.11.3
+  [ec485272] ↑ ArnoldiMethod v0.1.0 ⇒ v0.2.0
+  [d1d4a3ce] - BitFlags v0.1.7
+  [944b1d66] - CodecZlib v0.7.0
+  [35d6a980] - ColorSchemes v3.19.0
+  [3da002f7] - ColorTypes v0.11.4
+  [c3611d14] - ColorVectorSpace v0.9.9
+  [5ae59095] - Colors v0.12.8
+  [861a8166] + Combinatorics v1.0.2
+⌅ [863f3e99] ↑ Comonicon v0.9.1 ⇒ v0.12.18
+⌅ [34da2185] ↓ Compat v4.4.0 ⇒ v3.46.0
+  [5218b696] ↑ Configurations v0.16.6 ⇒ v0.17.4
+  [d38c429a] - Contour v0.6.2
+  [150eb455] + CoordinateTransformations v0.6.2
+  [5a653867] + Counters v0.3.3
+  [3bff3928] + Crystallography v0.5.1
+⌅ [93b1d1cd] + CrystallographyBase v0.5.2
+⌃ [a93c6f00] ↓ DataFrames v1.4.3 ⇒ v1.3.6
+  [1eaa2786] ↑ EquationsOfStateOfSolids v0.2.2 ⇒ v0.4.2
+  [e2ba6199] - ExprTools v0.1.8
+  [b12df14e] ↑ Express v0.2.3 ⇒ v0.9.0
+  [0fa58581] ↑ ExpressCommands v0.1.0 ⇒ v0.6.0
+  [55351af7] ↑ ExproniconLite v0.6.13 ⇒ v0.7.6
+  [8f5d6c58] + EzXML v1.1.0
+  [c87230d0] - FFMPEG v0.4.1
+  [5789e2e9] + FileIO v1.16.0
+  [53c48c17] - FixedPointNumbers v0.8.4
+⌅ [d9f16b24] + Functors v0.2.8
+  [28b8d3ca] - GR v0.71.1
+  [86223c79] + Graphs v1.7.4
+  [42e2da0e] - Grisu v1.0.2
+  [cd3eb016] - HTTP v1.5.5
+  [b5f81e59] - IOCapture v0.2.2
+  [83e8ac13] - IniFile v0.5.1
+  [842dd82b] - InlineStrings v1.3.2
+  [d8418881] - Intervals v1.8.0
+  [c8e1da08] + IterTools v1.4.0
+  [033835bb] + JLD2 v0.4.29
+  [1019f520] - JLFzf v0.1.5
+  [b964fa9f] - LaTeXStrings v1.3.0
+  [23fbe1c1] - Latexify v0.15.17
+  [093fc24a] - LightGraphs v1.3.5
+  [e6f89c97] - LoggingExtras v1.0.0
+  [d8e11817] + MLStyle v0.4.16
+  [5dd3f0b1] - MatchCore v0.1.1
+  [739be429] - MbedTLS v1.1.7
+  [442fdcdd] - Measures v0.3.2
+  [78c3b35d] - Mocking v0.7.5
+  [d8a4904e] - MutableArithmetics v1.1.0
+  [4d8831e6] - OpenSSL v1.3.2
+  [9b87118b] ↑ PackageCompiler v1.6.0 ⇒ v2.1.1
+  [d96e819e] + Parameters v0.12.3
+  [7b2266bf] + PeriodicTable v1.1.3
+  [b98c9c47] - Pipe v1.3.0
+  [ccf2f8ad] - PlotThemes v3.1.0
+  [995b91a9] - PlotUtils v1.3.1
+  [91a5bcdd] - Plots v1.36.5
+  [f27b6e38] ↑ Polynomials v2.0.25 ⇒ v3.2.0
+⌅ [08abe8d2] ↓ PrettyTables v2.2.1 ⇒ v1.3.1
+  [1b2dc2e6] + Pseudopotentials v0.8.1
+  [e44308e6] + PyFortran90Namelists v0.1.0
+  [95228164] + QuantumESPRESSO v0.8.0
+  [51b62caa] + QuantumESPRESSOBase v0.7.7
+⌅ [f713baf6] + QuantumESPRESSOCommands v0.6.3
+  [524a00d3] + QuantumESPRESSOExpress v0.5.7
+  [a4e7ca57] + QuantumESPRESSOFormatter v0.3.4
+  [a780ab42] + QuantumESPRESSOParser v0.3.10
+  [cbbcb084] + ReadableRegex v0.3.2
+  [01d81517] - RecipesPipeline v0.6.11
+  [992d4aef] - Showoff v1.0.3
+  [777ac1f9] - SimpleBufferStream v1.1.0
+⌅ [6a97d125] ↑ SimpleWorkflows v0.8.1 ⇒ v0.16.1
+⌅ [f761d5c5] + Spglib v0.5.3
+  [892a3eda] - StringManipulation v0.3.0
+  [62fd8b95] - TensorCore v0.1.1
+  [b4f28e30] - TikzGraphs v1.1.0
+  [37f6aa50] - TikzPictures v3.2.0
+  [f269a46b] - TimeZones v1.9.0
+  [410a4b4d] + Tricks v0.1.6
+  [0ca489f0] + TryCatch v0.1.1
+  [0fb2cfb0] + TypeTransform v0.1.3
+  [1cfade01] - UnicodeFun v0.4.1
+  [8030dd95] + UnifiedPseudopotentialFormat v0.4.1
+  [41fe7b60] - Unzip v0.2.0
+  [6e34b625] - Bzip2_jll v1.0.8+0
+  [83423d85] - Cairo_jll v1.16.1+1
+  [2e619515] - Expat_jll v2.4.8+0
+  [b22a6f82] - FFMPEG_jll v4.4.2+2
+  [a3f928ae] - Fontconfig_jll v2.13.93+0
+  [d7e528f0] - FreeType2_jll v2.10.4+0
+  [559328eb] - FriBidi_jll v1.0.10+0
+  [0656b61e] - GLFW_jll v3.3.8+0
+  [d2c73de3] - GR_jll v0.71.1+0
+  [78b55507] - Gettext_jll v0.21.0+0
+  [7746bdde] - Glib_jll v2.74.0+1
+  [3b182d85] - Graphite2_jll v1.3.14+0
+  [2e76f6c2] - HarfBuzz_jll v2.8.1+1
+  [aacddb02] - JpegTurbo_jll v2.1.2+0
+  [c1c5ebd0] - LAME_jll v3.100.1+0
+  [88015f11] - LERC_jll v3.0.0+1
+  [1d63c593] + LLVMOpenMP_jll v15.0.4+0
+  [dd4b983a] - LZO_jll v2.10.1+0
+  [e9f186c6] - Libffi_jll v3.2.2+1
+  [d4300ac3] - Libgcrypt_jll v1.8.7+0
+  [7e76a0d4] - Libglvnd_jll v1.6.0+0
+  [7add5ba3] - Libgpg_error_jll v1.42.0+0
+  [4b2f31a3] - Libmount_jll v2.35.0+0
+  [89763e89] - Libtiff_jll v4.4.0+0
+  [38a345b3] - Libuuid_jll v2.36.0+0
+  [d3a379c0] - LittleCMS_jll v2.12.0+0
+  [7cb0a576] - MPICH_jll v3.4.3+1
+  [e7412a2a] - Ogg_jll v1.3.5+1
+  [643b3616] - OpenJpeg_jll v2.4.0+0
+  [458c3c95] - OpenSSL_jll v1.1.19+0
+  [91d4177d] - Opus_jll v1.3.2+0
+  [30392449] - Pixman_jll v0.40.1+0
+  [9c32591e] - Poppler_jll v21.9.0+0
+  [ea2cea3b] - Qt5Base_jll v5.15.3+2
+  [a2964d1f] - Wayland_jll v1.19.0+0
+  [2381bf8a] - Wayland_protocols_jll v1.25.0+0
+  [aed1982a] - XSLT_jll v1.1.34+0
+  [4f6342f7] - Xorg_libX11_jll v1.6.9+4
+  [0c0b7dd1] - Xorg_libXau_jll v1.0.9+4
+  [935fb764] - Xorg_libXcursor_jll v1.2.0+4
+  [a3789734] - Xorg_libXdmcp_jll v1.1.3+4
+  [1082639a] - Xorg_libXext_jll v1.3.4+4
+  [d091e8ba] - Xorg_libXfixes_jll v5.0.3+4
+  [a51aa0fd] - Xorg_libXi_jll v1.7.10+4
+  [d1454406] - Xorg_libXinerama_jll v1.1.4+4
+  [ec84b674] - Xorg_libXrandr_jll v1.5.2+4
+  [ea2f1a96] - Xorg_libXrender_jll v0.9.10+4
+  [14d82f49] - Xorg_libpthread_stubs_jll v0.1.0+3
+  [c7cfdc94] - Xorg_libxcb_jll v1.13.0+3
+  [cc61e674] - Xorg_libxkbfile_jll v1.1.0+4
+  [12413925] - Xorg_xcb_util_image_jll v0.4.0+1
+  [2def613f] - Xorg_xcb_util_jll v0.4.0+1
+  [975044d2] - Xorg_xcb_util_keysyms_jll v0.4.0+1
+  [0d47668e] - Xorg_xcb_util_renderutil_jll v0.3.9+1
+  [c22f9ab0] - Xorg_xcb_util_wm_jll v0.4.1+1
+  [35661453] - Xorg_xkbcomp_jll v1.4.2+4
+  [33bec58e] - Xorg_xkeyboard_config_jll v2.27.0+4
+  [c5fb5394] - Xorg_xtrans_jll v1.4.0+3
+  [3161d3a3] - Zstd_jll v1.5.2+0
+  [214eeab7] - fzf_jll v0.29.0+0
+  [a4ae2306] - libaom_jll v3.4.0+0
+  [0ac62f75] - libass_jll v0.15.1+0
+  [f638f0a6] - libfdk_aac_jll v2.0.2+0
+  [b53b4c65] - libpng_jll v1.6.38+0
+  [f27f6e37] - libvorbis_jll v1.3.7+1
+  [ac4a9f1e] + spglib_jll v1.16.5+0
+  [1270edf5] - x264_jll v2021.5.5+0
+  [dfaa095f] - x265_jll v3.5.0+0
+  [d8fb68d0] - xkbcommon_jll v1.4.1+0
+  [8bf52ea8] - CRC32c
+  [efcefdf7] - PCRE2_jll v10.40.0+0
+        Info Packages marked with ⌃ and ⌅ have new versions available, but those with ⌅ are restricted by compatibility constraints from upgrading. To see why use `status --outdated -m`
+    Building ExpressCommands → `~/.julia/scratchspaces/44cfe95a-1eb2-52ea-b672-e2afdf69b78f/eb40bc516b985a9c32377ce6f998247f435959e4/build.log`</code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; pkg&quot;add https://github.com/MineralsCloud/ExpressCommands.jl&quot;</code><code class="nohighlight hljs ansi" style="display:block;">┌ Warning: The Pkg REPL mode is intended for interactive use only, and should not be used from scripts. It is recommended to use the functional API instead.
+└ @ Pkg.REPLMode /cache/build/default-amdci5-6/julialang/julia-release-1-dot-8/usr/share/julia/stdlib/v1.8/Pkg/src/REPLMode/REPLMode.jl:379
+     Cloning git-repo `https://github.com/MineralsCloud/ExpressCommands.jl`
+    Updating git-repo `https://github.com/MineralsCloud/ExpressCommands.jl`
+   Resolving package versions...
+    Updating `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Project.toml`
+  [0fa58581] ~ ExpressCommands v0.6.0 ⇒ v0.6.0 `https://github.com/MineralsCloud/ExpressCommands.jl#main`
+    Updating `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Manifest.toml`
+  [0fa58581] ~ ExpressCommands v0.6.0 ⇒ v0.6.0 `https://github.com/MineralsCloud/ExpressCommands.jl#main`</code></pre><p>in the second step above.</p><h2 id="Update-ExpressCommands"><a class="docs-heading-anchor" href="#Update-ExpressCommands">Update <code>ExpressCommands</code></a><a id="Update-ExpressCommands-1"></a><a class="docs-heading-anchor-permalink" href="#Update-ExpressCommands" title="Permalink"></a></h2><p>Please <a href="https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications#configuring-your-watch-settings-for-an-individual-repository">watch</a> our <a href="https://github.com/MineralsCloud/ExpressCommands.jl">GitHub repository</a> for new releases. Once we release a new version, you can update <code>ExpressCommands</code> by typing</p><pre><code class="language-julia-repl hljs" style="display:block;">julia&gt; using Pkg</code><code class="nohighlight hljs ansi" style="display:block;"></code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; Pkg.update(&quot;ExpressCommands&quot;)</code><code class="nohighlight hljs ansi" style="display:block;">    Updating registry at `~/.julia/registries/General`
+    Updating git-repo `https://github.com/JuliaRegistries/General.git`
+    Updating git-repo `https://github.com/MineralsCloud/ExpressCommands.jl`
+  No Changes to `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Project.toml`
+  No Changes to `~/work/ExpressCommands.jl/ExpressCommands.jl/docs/build/developers/Manifest.toml`</code><br/><code class="language-julia-repl hljs" style="display:block;">julia&gt; Pkg.gc()</code><code class="nohighlight hljs ansi" style="display:block;">      Active manifest files: 6 found
+      Active artifact files: 77 found
+      Active scratchspaces: 9 found
+     Deleted no artifacts, repos, packages or scratchspaces</code></pre><p>in the Julia REPL.</p><h2 id="Uninstall-and-reinstall-ExpressCommands"><a class="docs-heading-anchor" href="#Uninstall-and-reinstall-ExpressCommands">Uninstall and reinstall <code>ExpressCommands</code></a><a id="Uninstall-and-reinstall-ExpressCommands-1"></a><a class="docs-heading-anchor-permalink" href="#Uninstall-and-reinstall-ExpressCommands" title="Permalink"></a></h2><p>Sometimes errors may occur if the package is not properly installed. In this case, you may want to uninstall and reinstall the package. Here is how to do that:</p><ol><li><p>To uninstall, in a Julia session, run</p><pre><code class="language-julia-repl hljs">julia&gt; using Pkg
+
+julia&gt; Pkg.rm(&quot;ExpressCommands&quot;)
+
+julia&gt; Pkg.gc()</code></pre></li><li><p>Press <code>ctrl+d</code> to quit the current session. Start a new Julia session and reinstall <code>ExpressCommands</code>.</p></li></ol></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Home</a><a class="docs-footer-nextpage" href="../public/">API Reference »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 0.27.23 on <span class="colophon-date" title="Monday 28 November 2022 01:21">Monday 28 November 2022</span>. Using Julia version 1.8.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
