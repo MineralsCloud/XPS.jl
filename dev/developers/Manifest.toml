@@ -242,13 +242,13 @@ version = "0.4.2"
 
 [[deps.Express]]
 deps = ["AbInitioSoftwareBase", "Configurations", "Dates", "EquationsOfStateOfSolids", "Formatting", "JLD2", "Logging", "Pseudopotentials", "PyQHA", "SimpleWorkflows", "Unitful"]
-git-tree-sha1 = "cd57ff2ea5b6ee7f506f4f7d03dd7e0ffc2b0afc"
+git-tree-sha1 = "9de17017aea44ff46f43199f391bc9f99bc9c94d"
 uuid = "b12df14e-adf7-11e9-0606-d5813a258349"
-version = "0.9.0"
+version = "0.9.2"
 
 [[deps.ExpressCommands]]
 deps = ["AbInitioSoftwareBase", "Comonicon", "EquationOfStateRecipes", "EquationsOfStateOfSolids", "Express", "JLD2", "PrettyPrint", "QuantumESPRESSOExpress", "Requires", "SimpleWorkflows"]
-git-tree-sha1 = "eb40bc516b985a9c32377ce6f998247f435959e4"
+git-tree-sha1 = "a2fc9948257a26688017644ef7aa35f3d824f952"
 repo-rev = "main"
 repo-url = "https://github.com/MineralsCloud/ExpressCommands.jl"
 uuid = "0fa58581-61d8-4f50-b6a2-2e2dd41ab979"
@@ -340,9 +340,9 @@ uuid = "3587e190-3f89-42d0-90ee-14403ec27112"
 version = "0.1.8"
 
 [[deps.InvertedIndices]]
-git-tree-sha1 = "bee5f1ef5bf65df56bdd2e40447590b272a5471f"
+git-tree-sha1 = "82aec7a3dd64f4d9584659dc0b62ef7db2ef3e19"
 uuid = "41ab1584-1d38-5bbf-9106-f11c6c58b48f"
-version = "1.1.0"
+version = "1.2.0"
 
 [[deps.IrrationalConstants]]
 git-tree-sha1 = "7fd44fd4ff43fc60815f8e764c0f352b83c49151"
@@ -744,9 +744,9 @@ version = "0.9.4"
 
 [[deps.SimpleWorkflows]]
 deps = ["DataFrames", "Dates", "Graphs", "JLD2", "TryCatch"]
-git-tree-sha1 = "17feb180aa81480e637cd6f55385f78cd6f92f8f"
+git-tree-sha1 = "e34059cb81dfb12ac738d253c6fcde8e5c3ec15b"
 uuid = "6a97d125-85da-4b66-b300-4bba10360563"
-version = "0.16.1"
+version = "0.16.2"
 
 [[deps.SnoopPrecompile]]
 git-tree-sha1 = "f604441450a3c0569830946e5b33b78c928e1a85"
@@ -780,9 +780,9 @@ version = "0.5.3"
 
 [[deps.StaticArrays]]
 deps = ["LinearAlgebra", "Random", "StaticArraysCore", "Statistics"]
-git-tree-sha1 = "4e051b85454b4e4f66e6a6b7bdc452ad9da3dcf6"
+git-tree-sha1 = "ffc098086f35909741f71ce21d03dadf0d2bfa76"
 uuid = "90137ffa-7385-5640-81b9-e52037218182"
-version = "1.5.10"
+version = "1.5.11"
 
 [[deps.StaticArraysCore]]
 git-tree-sha1 = "6b7ba252635a5eff6a0b0664a41ee140a1c9e72a"
