@@ -1,8 +1,8 @@
 "Subcommands of `xps` for the QHA workflow."
 module QHA
 
-using AbInitioSoftwareBase: load
 using Comonicon: @cast
+using ExpressBase.Files: load
 using Express.QuasiHarmonicApproxWorkflow.Recipes: buildworkflow
 using SimpleWorkflows: run!
 
@@ -15,8 +15,8 @@ Run a configuration file (with an absolute path will be better). It is equivalen
 """
 @cast function run(file)
     workflow = buildworkflow(file)
-    dict = load(file)
-    run!(workflow; filename = dict["save"]["status"])
+    exec = run!(workflow)
+    wait(exec)
     return workflow
 end
 
