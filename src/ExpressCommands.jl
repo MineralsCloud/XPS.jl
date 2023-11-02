@@ -1,10 +1,10 @@
 module ExpressCommands
 
-using AbInitioSoftwareBase: load, extension
 using Comonicon: @cast, @main
-using JLD2: JLD2
+using ExpressBase.Files: extension, load
 using PrettyPrint: pprint
 using Requires: @require
+using Serialization: deserialize
 
 """
 Print the `file` in a pretty format.
@@ -14,9 +14,9 @@ Print the `file` in a pretty format.
 - `file`: the file to be printed. Available extensions are `.jld2`, `.json`, `.yaml`, `.yml` or `.toml`.
 """
 @cast function print(file)
-    ext = lowercase(extension(file))
-    if ext == "jld2"
-        pprint(JLD2.load(file))
+    ext = lowercase((file))
+    if ext == "jls"
+        pprint(deserialize(file))
     elseif ext in ("json", "yaml", "yml", "toml")
         data = load(file)
         pprint(data)
@@ -63,40 +63,14 @@ end
 #     end
 # end
 
-function __init__()
-    @require TikzGraphs="b4f28e30-c73f-5eaf-a395-8a9db949a742" begin
-        @require TikzPictures="37f6aa50-8035-52d0-81c2-5a1d08754b2d" begin
-            """
-            Plot the directed acyclic graph representing the relations between jobs in a `Workflow`.
-
-            # Args
-
-            - `file`: the file to be plotted. Available extension is `.jld2`.
-            """
-            @cast function graph(file)
-                ext = extension(file)
-                graph = JLD2.load(file)["graph"]
-                if ext == "jld2"
-                    TikzGraphs.save(
-                        TikzPictures.PDF(replace(file, ".jld2" => ".pdf")),
-                        TikzGraphs.plot(graph),
-                    )
-                else
-                    error("unsupported extension `$ext`!")
-                end
-            end
-        end
-    end
-end
-
 include("EOS.jl")
 @cast EOS
 
 include("Ph.jl")
 @cast Ph
 
-include("QHA.jl")
-@cast QHA
+# include("QHA.jl")
+# @cast QHA
 
 function getmodule(recipe)
     recipe = lowercase(recipe)
@@ -105,7 +79,7 @@ function getmodule(recipe)
     elseif recipe in ("phonon dispersion", "vdos")
         Ph
     elseif recipe in ("qha single", "multi qha")
-        QHA
+        # QHA
     else
         error("recipe `$recipe` is not recognized!")
     end
