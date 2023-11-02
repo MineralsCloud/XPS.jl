@@ -1,12 +1,10 @@
 "Subcommands of `xps` for the phonon workflow."
 module Ph
 
-using AbInitioSoftwareBase: load
 using Comonicon: @cast
-using Express.PhononWorkflow.Recipes: buildworkflow
+using Express.PhononWorkflow.Recipes: Workflow, build
 using QuantumESPRESSOExpress
 using SimpleWorkflows: run!
-# using ..ExpressCommands: @load_plugin
 
 """
 Run a configuration file (with an absolute path will be better). It is equivalent to `xps run <file>`.
@@ -16,10 +14,9 @@ Run a configuration file (with an absolute path will be better). It is equivalen
 - `file`: the file to be run. Acceptable extensions are `.json`, `.yaml`, `.yml`, or `.toml`.
 """
 @cast function run(file)
-    # @load_plugin
-    workflow = buildworkflow(file)
-    dict = load(file)
-    run!(workflow; filename = dict["save"]["status"])
+    workflow = build(Workflow, file)
+    exec = run!(workflow)
+    wait(exec)
     return workflow
 end
 
