@@ -20,6 +20,7 @@ SimpleWorkflows = "6a97d125-85da-4b66-b300-4bba10360563"
 [compat]
 AbInitioSoftwareBase = "0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.10"
 Comonicon = "0.12, 1"
+EasyJobsBase = "0.15"
 EquationOfStateRecipes = "0.1, 0.2, 0.3, 0.4, 0.5, 0.6"
 EquationsOfStateOfSolids = "0.2, 0.3, 0.4"
 Express = "0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9"
